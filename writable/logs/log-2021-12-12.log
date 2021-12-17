@@ -1,0 +1,16 @@
+ERROR - 2021-12-12 00:50:15 --> Error connecting to the database: Class 'SQLite3' not found
+ERROR - 2021-12-12 00:50:39 --> Error connecting to the database: Class 'SQLite3' not found
+ERROR - 2021-12-12 01:00:12 --> Error connecting to the database: Class 'SQLite3' not found
+CRITICAL - 2021-12-12 01:12:14 --> Class name must be a valid object or a string
+#0 D:\CI4App\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::activator(Object(Myth\Auth\Config\Auth), false)
+#1 D:\CI4App\vendor\codeigniter4\framework\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('activator', Array)
+#2 D:\CI4App\vendor\myth\auth\src\Config\Services.php(86): CodeIgniter\Config\BaseService::getSharedInstance('activator', NULL)
+#3 D:\CI4App\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::activator()
+#4 D:\CI4App\vendor\codeigniter4\framework\system\Common.php(937): CodeIgniter\Config\BaseService::__callStatic('activator', Array)
+#5 D:\CI4App\vendor\myth\auth\src\Controllers\AuthController.php(195): service('activator')
+#6 D:\CI4App\vendor\codeigniter4\framework\system\CodeIgniter.php(824): Myth\Auth\Controllers\AuthController->attemptRegister()
+#7 D:\CI4App\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#8 D:\CI4App\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\CI4App\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\CI4App\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\CI4App\\publi...')
+#11 {main}

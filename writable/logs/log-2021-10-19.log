@@ -1,0 +1,12 @@
+CRITICAL - 2021-10-19 00:05:09 --> Undefined variable $k
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\detail.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('detail', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(107): view('detail', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->detail('17')
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
