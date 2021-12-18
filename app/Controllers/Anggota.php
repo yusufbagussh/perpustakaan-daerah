@@ -17,7 +17,6 @@ class Anggota extends BaseController
     public function tambahdata()
     {
         session();
-
         $data = [
             'judul' => 'Form Tambah Data Anggota',
             'validation' => \Config\Services::validation()
@@ -76,7 +75,8 @@ class Anggota extends BaseController
                 'anggota_alamat' => $this->request->getVar('anggota_alamat'),
                 'anggota_nomor_identitas' => $this->request->getVar('anggota_nomor_identitas'),
                 'anggota_jenis_kartu' => $this->request->getVar('anggota_jenis_kartu'),
-                'anggota_foto' => $namaFoto
+                'anggota_foto' => $namaFoto,
+                'users_id' => $this->request->getVar('users_id')
             ]
         );
 
