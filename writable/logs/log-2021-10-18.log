@@ -1,0 +1,336 @@
+CRITICAL - 2021-10-18 01:36:30 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 01:37:01 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 01:37:29 --> Call to a member function getRandomName() on string
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:07:54 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:08:34 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:09:39 --> Call to a member function getRandomName() on array
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:10:02 --> Call to a member function getRandomName() on array
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:11:23 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:13:24 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:13:34 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:16:23 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2021-10-18 03:17:16 --> Column 'cover' cannot be null
+CRITICAL - 2021-10-18 03:17:16 --> Column 'cover' cannot be null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(280): mysqli->query('INSERT INTO `ko...')
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(663): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(591): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', Array, false)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#10 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2021-10-18 03:17:55 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:20:10 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2021-10-18 03:20:27 --> Column 'cover' cannot be null
+CRITICAL - 2021-10-18 03:20:27 --> Column 'cover' cannot be null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(280): mysqli->query('INSERT INTO `ko...')
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(663): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(591): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', Array, false)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#10 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2021-10-18 03:20:52 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:21:02 --> syntax error, unexpected variable "$this", expecting "]"
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Router\Router.php(160): CodeIgniter\Router\Router->autoRoute('Komik/simpan')
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(702): CodeIgniter\Router\Router->handle('Komik/simpan')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2021-10-18 03:21:30 --> Column 'cover' cannot be null
+CRITICAL - 2021-10-18 03:21:30 --> Column 'cover' cannot be null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(280): mysqli->query('INSERT INTO `ko...')
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(663): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(591): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', Array, false)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#10 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2021-10-18 03:21:41 --> Call to a member function move() on string
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:21:58 --> Call to a member function move() on string
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:22:05 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:24:10 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:24:36 --> Call to a member function getClientName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:24:53 --> Call to a member function getClientName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpan()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:27:54 --> Call to a member function getClientName() on null
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->simpans()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 03:47:30 --> Undefined variable $komik
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 39)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(97): view('index', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->delete('7')
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-10-18 03:48:06 --> Invalid file: /Komik/index.php
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/Komik/index.ph...')
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('/Komik/index', Array, true)
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(97): view('/Komik/index', Array)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->delete('9')
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-10-18 04:04:37 --> Undefined variable $k
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(21): view('index', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->index()
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2021-10-18 22:43:05 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2021-10-18 22:43:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(18): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->index()
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-10-18 22:51:45 --> Undefined array key "judul_komik"
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\ubah.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 42)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('ubah', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(106): view('ubah', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah('16')
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-10-18 22:57:00 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 22:57:27 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 22:57:27 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 23:00:15 --> Undefined variable $k
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\ubah.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('ubah', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(106): view('ubah', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah('16')
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-10-18 23:00:16 --> Undefined variable $k
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Views\ubah.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('ubah', Array, true)
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\app\Controllers\Komik.php(106): view('ubah', Array)
+#5 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah('16')
+#6 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#7 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-10-18 23:02:01 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 23:02:48 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 23:03:27 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-10-18 23:04:02 --> Too few arguments to function App\Controllers\Komik::ubah(), 0 passed in C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php on line 802 and exactly 1 expected
+#0 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Komik->ubah()
+#1 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#2 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Kuliah\Back-End\Tugas_Backend\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
