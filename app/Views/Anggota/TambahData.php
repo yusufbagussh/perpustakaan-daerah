@@ -49,17 +49,19 @@
                 <div class="form-group row">
                     <label for="anggota_nomor_identitas" class="col-sm-2 col-form-label">Nomor Indentitas</label>
                     <div class="col-sm-10">
-                        <select class="form-control" name="anggota_nomor_identitas">
-                            <?php foreach ($kategori as $k) : ?>
-                                <option value="<?= $k['id_kategori']; ?>"><?= $k['nama_kategori']; ?></option>
-                            <?php endforeach ?>
-                        </select>
+                        <input type="number" class="form-control" id="anggota_nomor_identitas" name="anggota_nomor_identitas" value="<?= old('anggota_nomor_identitas'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="anggota_jenis_kartu" class="col-sm-2 col-form-label">Jenis Kartu Identitas</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="anggota_jenis_kartu" name="anggota_jenis_kartu" value="<?= old('anggota_jenis_kartu'); ?>">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="users_id" class="col-sm-2 col-form-label">Jenis Kartu Identitas</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="users_id" name="users_id" value="<?= user()->id; ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
