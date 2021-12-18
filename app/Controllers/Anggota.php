@@ -14,7 +14,33 @@ class Anggota extends BaseController
         $this->userModel = new UserModel();
     }
 
-    public function tambahdata()
+    public function listAnggota()
+    {
+        $data = [
+            'anggota' =>  $this->anggotaModel->getBukuKategori(),
+            'judul' => 'Daftar Buku Perpustakaan'
+        ];
+
+        return view('anggota/listbuku', $data);
+    }
+
+    public function detailAnggota($anggota_id)
+    {
+        $anggota = $this->anggotaModel->getBukuDetail($anggota_id);
+        $data = [
+            'anggota' =>  $anggota[0],
+            'judul' => 'Daftar Buku Perpustakaan'
+        ];
+
+        //jika anggota tidak ada
+        if (empty($data['anggota'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Judul anggota ' . $anggota_id . ' tidak ditemukan');
+        };
+
+        return view('anggota/detailbuku', $data);
+    }
+
+    public function tambahAnggota()
     {
         session();
         $data = [
@@ -22,10 +48,10 @@ class Anggota extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('anggota/tambahdata', $data);
+        return view('anggota/tambahanggota', $data);
     }
 
-    public function savedata()
+    public function simpanAnggota()
     {
         //validasi input
         if (!$this->validate([
@@ -47,7 +73,7 @@ class Anggota extends BaseController
             ]
         ])) {
             //$validation = \Config\Services::validation();
-            return redirect()->to('/anggota/tambahdata')->withInput();
+            return redirect()->to('/anggota/tambahanggota')->withInput();
         }
 
         // $slug = url_title($this->request->getVar('anggota_nama'), '-', true);

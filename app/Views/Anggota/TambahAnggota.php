@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="users_id" class="col-sm-2 col-form-label">Jenis Kartu Identitas</label>
+                    <label for="users_id" class="col-sm-2 col-form-label">User ID</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="users_id" name="users_id" value="<?= user()->id; ?>" readonly>
                     </div>
