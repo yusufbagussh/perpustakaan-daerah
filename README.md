@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# Frontend Sinta
 
 ## What is CodeIgniter?
 
