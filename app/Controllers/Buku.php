@@ -15,6 +15,77 @@ class Buku extends BaseController
         $this->kategoriModel = new KategoriModel();
     }
 
+    public function tambahdata()
+    {
+        session();
+
+        $data = [
+            'judul' => 'Form Tambah Data Anggota',
+            'validation' => \Config\Services::validation()
+        ];
+
+        return view('anggota/tambahdata', $data);
+    }
+
+    public function savedata()
+    {
+        //validasi input
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required|is_unique[buku.nama]',
+                'errors' => [
+                    'required' => '{field} buku harus diisi',
+                    'is_unique' => '{field} buku sudah terdaftar'
+                ]
+            ],
+            'gambar' => [
+                'rules' => 'max_size[gambar, 1024]|is_image[gambar]|mime_in[gambar,image/jpg,image/png,image/jpeg]',
+                'errors' => [
+                    'max_size' => 'Ukuran gambar terlalu besar',
+                    'is_image' => 'Yang anda pilih bukanlah gambar',
+                    'mime_in' => 'Format gambar tidak sesuai'
+
+                ]
+            ]
+        ])) {
+            //$validation = \Config\Services::validation();
+            return redirect()->to('/anggota/tambahdata')->withInput();
+        }
+
+        $slug = url_title($this->request->getVar('nama'), '-', true);
+
+        $fileGambar = $this->request->getFile('gambar');
+
+        //apabila tidak ada gambar yang diupload
+        if ($fileGambar->getError() == 4) {
+            $namaGambar = 'default.png';
+        } else {
+            //generate nama sampul random
+            $namaGambar = $fileGambar->getRandomName();
+            //pindahkan gambar ke folder img
+            $fileGambar->move('img', $namaGambar);
+        }
+
+        $this->bukuModel->save(
+            [
+                'nama' => $this->request->getVar('nama'),
+                'slug' => $slug,
+                'username' => $this->request->getVar('username'),
+                'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+                'tempat_lahir' => $this->request->getVar('tempat_lahir'),
+                'tanggal_lahir' => $this->request->getVar('tanggal_lahir'),
+                'alamat' => $this->request->getVar('alamat'),
+                'nomor_identitas' => $this->request->getVar('nomor_identitas'),
+                'jenis_kartu' => $this->request->getVar('jenis_kartu'),
+                'gambar' => $namaGambar
+            ]
+        );
+
+        session()->setFlashdata('pesan', 'Data berhasil dimasukkan.');
+
+        return redirect()->to('/buku');
+    }
+
     public function index()
     {
 

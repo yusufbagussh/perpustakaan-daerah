@@ -7,15 +7,15 @@ use CodeIgniter\Model;
 class KategoriModel extends Model
 {
     protected $table      = 'kategori';
-    protected $primaryKey = 'id_kategori';
-    protected $allowedFields = ['id_kategori', 'nama_kategori'];
+    protected $primaryKey = 'kategori_id';
+    protected $allowedFields = ['kategori_id', 'kategori_nama'];
 
     public function getKategori($id_kategori = "")
     {
         if ($id_kategori == "") {
             return $this->findAll();
         } else {
-            return $this->where(['id_kategori' => $id_kategori])->first();
+            return $this->where(['kategori_id' => $id_kategori])->first();
         }
     }
 }
