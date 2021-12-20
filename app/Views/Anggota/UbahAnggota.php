@@ -5,76 +5,60 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/buku/update/<?= $buku['id_buku']; ?>">
+            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/anggota/update/<?= $anggota['id_buku']; ?>">
                 <?= csrf_field(); ?>
-                <input type="hidden" name="gambarLama" value="<?= $buku['gambar']; ?>">
+                <input type="hidden" name="fotoLama" value="<?= $anggota['anggota_foto']; ?>">
                 <div class="form-group row">
-                    <label for="judul" class="col-sm-2 col-form-label">Judul</label>
+                    <label for="anggota_nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul" autofocus value="<?= (old('judul')) ? old('judul') : $buku['judul']; ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('anggota_nama')) ? 'is-invalid' : ''; ?>" id="anggota_nama" name="anggota_nama" autofocus value="<?= (old('anggota_nama')) ? old('anggota_nama') : $anggota['anggota_nama']; ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('judul'); ?>
+                            <?= $validation->getError('anggota_nama'); ?>
                         </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
+                    <label for="anggota_username" class="col-sm-2 col-form-label">Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penulis" name="penulis" value="<?= (old('penulis')) ? old('penulis') : $buku['penulis']; ?>">
+                        <input type="text" class="form-control" id="anggota_username" name="anggota_username" value="<?= (old('anggota_username')) ? old('anggota_username') : $anggota['anggota_username']; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
+                    <label for="anggota_jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penerbit" name="penerbit" value="<?= (old('penerbit')) ? old('penerbit') : $buku['penerbit']; ?>">
+                        <input type="text" class="form-control" id="anggota_jenis_kelamin" name="anggota_jenis_kelamin" value="<?= (old('anggota_jenis_kelamin')) ? old('anggota_jenis_kelamin') : $anggota['anggota_jenis_kelamin']; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="isbn" class="col-sm-2 col-form-label">ISBN</label>
+                    <label for="anggota_tempat_lahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="isbn" name="isbn" value="<?= (old('isbn')) ? old('isbn') : $buku['isbn']; ?>">
+                        <input type="text" class="form-control" id="anggota_tempat_lahir" name="anggota_tempat_lahir" value="<?= (old('anggota_tempat_lahir')) ? old('anggota_tempat_lahir') : $anggota['anggota_tempat_lahir']; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="stok" class="col-sm-2 col-form-label">Stok Buku</label>
+                    <label for="anggota_tanggal_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="stok" name="stok" value="<?= (old('stok')) ? old('stok') : $buku['stok']; ?>">
+                        <input type="number" class="form-control" id="anggota_tanggal_lahir" name="anggota_tanggal_lahir" value="<?= (old('anggota_tanggal_lahir')) ? old('anggota_tanggal_lahir') : $anggota['anggota_tanggal_lahir']; ?>">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="halaman" class="col-sm-2 col-form-label">Halaman</label>
+                    <label for="users_id" class="col-sm-2 col-form-label">ID Users</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="halaman" name="halaman" value="<?= (old('halaman')) ? old('halaman') : $buku['halaman']; ?>">
+                        <input type="number" class="form-control" id="users_id" name="users_id" value="<?= (old('users_id')) ? old('users_id') : $anggota['users_id']; ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" name="kategori">
-                            <?php foreach ($kategori as $k) : ?>
-                                <option value="<?= $k['id_kategori']; ?>"><?= $k['nama_kategori']; ?></option>
-                            <?php endforeach ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="sinopsis" class="col-sm-2 col-form-label">Sinopsis</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="sinopsis" name="sinopsis" value="<?= (old('sinopsis')) ? old('sinopsis') : $buku['sinopsis']; ?>">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="gambar" class="col-sm-2 col-form-label">Gambar</label>
+                    <label for="anggota_foto" class="col-sm-2 col-form-label">Foto Anggota</label>
                     <div class="col-sm-2">
-                        <img src="/img/<?= $buku['gambar']; ?>" class="img-tumbnail img-preview" width="100">
+                        <img src="/img/<?= $anggota['anggota_foto']; ?>" class="img-tumbnail img-preview" width="100">
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('gambar')) ? 'is-invalid' : ''; ?>" id="gambar" name="gambar" onchange="previewImg()">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('anggota_foto')) ? 'is-invalid' : ''; ?>" id="anggota_foto" name="anggota_foto" onchange="previewImg()">
                             <div class="invalid-feedback">
-                                <?= $validation->getError('gambar'); ?>
+                                <?= $validation->getError('anggota_foto'); ?>
                             </div>
-                            <label class="custom-file-label" for="gambar"><?= $buku['gambar']; ?></label>
+                            <label class="custom-file-label" for="anggota_foto"><?= $anggota['anggota_foto']; ?></label>
                         </div>
                     </div>
                 </div>

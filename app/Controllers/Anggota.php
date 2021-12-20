@@ -133,13 +133,6 @@ class Anggota extends BaseController
 
     public function update($anggota_id)
     {
-        // $bukuLama = $this->anggotaModel->getBuku($this->request->getVar('slug'));
-        // if ($bukuLama['anggota_nama'] ==  $this->request->getVar('anggota_nama')) {
-        //     $rule_judul = 'required';
-        // } else {
-        //     $rule_judul = 'required|is_unique[anggota.anggota_nama]';
-        // }
-        //validasi input
         if (!$this->validate([
             'anggota_nama' => [
                 // 'rules' => $rule_judul,
