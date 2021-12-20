@@ -91,7 +91,7 @@ class Anggota extends BaseController
         return view('kategori/ubahkategori', $data);
     }
 
-    public function update($id_kategori)
+    public function updateKategori($id_kategori)
     {
         if (!$this->validate([
             'id_kategori' => [

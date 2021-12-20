@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\BukuModel;
 use App\Models\KategoriModel;
 use App\Models\AdminModel;
+use \Myth\Auth\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -14,232 +15,161 @@ class Admin extends BaseController
     {
         $this->bukuModel = new BukuModel();
         $this->kategoriModel = new KategoriModel();
-        $this->usersModel = new AdminModel();
+        $this->adminModel = new AdminModel();
     }
 
     public function index()
     {
 
-        $currentPage = $this->request->getVar('page_users') ? $this->request->getVar('page_users') : 1;
-        //$buku = $this->bukuModel->findAll();
-
-        $keyword = $this->request->getVar('keyword');
-        if ($keyword) {
-            $users = $this->usersModel->search($keyword);
-        } else {
-            $users = $this->usersModel;
-        }
-
         $data = [
-            'judul' => 'Daftar Buku Perpustakaan',
-            //'users' =>   $users->paginate(3, 'users'),
-            'users' =>   $this->usersModel->getBukuKategori(),
-            //'users' => $this->$users,
-            'pager' => $this->usersModel->pager,
-            'currentPage' => $currentPage
-
+            'judul' => 'Daftar Admin Perpustakaan',
+            'admin' => $this->adminModel->findAll()
         ];
 
-        return view('users/listbuku', $data);
+        return view('admin/listadmin', $data);
     }
 
-    public function detail($slug)
-    {
-        // $buku = $this->bukuModel->getBuku($slug);
-        // $data['buku'] = $buku[0];
-        // $data['judul'] = "Detail Buku";
-        $data = [
-            'judul' => 'Detail Buku',
-            'buku' =>   $this->bukuModel->getBuku($slug)
-        ];
-
-        //jika buku tidak ada
-        if (empty($data['buku'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Judul buku ' . $slug . ' tidak ditemukan');
-        };
-
-        return view('buku/detailbuku', $data);
-    }
-
-    public function tambah()
+    public function tambahAdmin()
     {
         session();
-        $kategori = $this->kategoriModel->getKategori();
         $data = [
-            'judul' => 'Form Tambah Data Buku',
-            'validation' => \Config\Services::validation(),
-            'kategori' => $kategori
+            'judul' => 'Form Tambah Admin',
+            'validation' => \Config\Services::validation()
         ];
 
-        return view('buku/tambahbuku', $data);
+        return view('admin/tambahadmin', $data);
     }
 
-    public function simpan()
+    public function simpanAdmin()
     {
         //validasi input
         if (!$this->validate([
-            'judul' => [
-                'rules' => 'required|is_unique[buku.judul]',
+            'admin_nama' => [
+                'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} buku harus diisi',
-                    'is_unique' => '{field} buku sudah terdaftar'
+                    'required' => '{field} admin harus diisi'
                 ]
             ],
-            'gambar' => [
-                'rules' => 'max_size[gambar, 1024]|is_image[gambar]|mime_in[gambar,image/jpg,image/png,image/jpeg]',
+            'admin_foto' => [
+                'rules' => 'max_size[admin_foto, 1024]|is_image[admin_foto]|mime_in[admin_foto,image/jpg,image/png,image/jpeg]',
                 'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar',
-                    'is_image' => 'Yang anda pilih bukanlah gambar',
-                    'mime_in' => 'Format gambar tidak sesuai'
+                    'max_size' => 'Ukuran foto terlalu besar',
+                    'is_image' => 'Yang anda pilih bukanlah foto',
+                    'mime_in' => 'Format foto tidak sesuai'
 
                 ]
             ]
         ])) {
             //$validation = \Config\Services::validation();
-            return redirect()->to('/buku/tambah')->withInput();
+            return redirect()->to('/admin/tambahadmin')->withInput();
         }
 
-        $slug = url_title($this->request->getVar('judul'), '-', true);
+        $fileFoto = $this->request->getFile('admin_foto');
 
-        $fileGambar = $this->request->getFile('gambar');
-
-        //apabila tidak ada gambar yang diupload
-        if ($fileGambar->getError() == 4) {
-            $namaGambar = 'default.png';
+        //apabila tidak ada admin_foto yang diupload
+        if ($fileFoto->getError() == 4) {
+            $namaFoto = 'default.png';
         } else {
             //generate nama sampul random
-            $namaGambar = $fileGambar->getRandomName();
-            //pindahkan gambar ke folder img
-            $fileGambar->move('img', $namaGambar);
+            $namaFoto = $fileFoto->getRandomName();
+            //pindahkan admin_foto ke folder img
+            $fileFoto->move('img', $namaFoto);
         }
 
-        $this->bukuModel->save(
+        $this->adminModel->save(
             [
-                'judul' => $this->request->getVar('judul'),
-                'slug' => $slug,
-                'penulis' => $this->request->getVar('penulis'),
-                'penerbit' => $this->request->getVar('penerbit'),
-                'isbn' => $this->request->getVar('isbn'),
-                'stok' => $this->request->getVar('stok'),
-                'halaman' => $this->request->getVar('halaman'),
-                'kategori' => $this->request->getVar('kategori'),
-                'sinopsis' => $this->request->getVar('sinopsis'),
-                'gambar' => $namaGambar
+                'admin_nama' => $this->request->getVar('admin_nama'),
+                'users_id' => $this->request->getVar('users_id'),
+                'admin_foto' => $namaFoto
             ]
         );
 
         session()->setFlashdata('pesan', 'Data berhasil dimasukkan.');
 
-        return redirect()->to('/buku');
+        return redirect()->to('/admin');
     }
 
-    public function delete($id)
+    public function hapusAdmin($admin_id)
     {
-        //jika ingin sekaligus menghapus gambar pada direktori
+        //jika ingin sekaligus menghapus admin_foto pada direktori
 
-        //cari gamber berdasarkan id
-        $buku = $this->bukuModel->find($id);
+        //cari gamber berdasarkan admin_id
+        $admin = $this->adminModel->find($admin_id);
 
         //cek jika gambarnya default
-        if ($buku['gambar'] != 'default.png') {
-            //hapus gambar
-            unlink('img/' . $buku['gambar']);
+        if ($admin['admin_foto'] != 'default.png') {
+            //hapus admin_foto
+            unlink('img/' . $admin['admin_foto']);
         }
 
-        $this->bukuModel->delete($id);
+        $this->adminModel->delete($admin_id);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to('/buku');
+        return redirect()->to('/admin');
     }
 
-    public function ubah($slug)
+    public function ubahAdmin($admin_id)
     {
         session();
-        // $kategori = $this->kategoriModel->getKategori();
-        // $data = [
-        //     'judul' => 'Form Ubah Data Buku',
-        //     'validation' => \Config\Services::validation(),
-        //     'buku' => $this->bukuModel->getBuku($slug),
-        //     'kategori' => $kategori
-        // ];
-        $buku = $this->bukuModel->getBuku($slug);
-        $kategori = $this->kategoriModel->getKategori();
+        $admin = $this->adminModel->getAdmin($admin_id);
 
         $data = [
-            'buku' => $buku,
-            'kategori' => $kategori,
+            'admin' => $admin,
             'validation' => \Config\Services::validation(),
-            'judul' => "Form Ubah Data Buku"
+            'judul' => "Form Ubah Data Admin"
         ];
 
 
-        return view('buku/ubahbuku', $data);
+        return view('admin/ubahadmin', $data);
     }
 
-    public function update($id_buku)
+    public function updateAdmin($admin_id)
     {
-        $bukuLama = $this->bukuModel->getBuku($this->request->getVar('slug'));
-        if ($bukuLama['judul'] ==  $this->request->getVar('judul')) {
-            $rule_judul = 'required';
-        } else {
-            $rule_judul = 'required|is_unique[buku.judul]';
-        }
         //validasi input
         if (!$this->validate([
-            'judul' => [
-                'rules' => $rule_judul,
+            'admin_nama' => [
+                'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} buku harus diisi',
-                    'is_unique' => '{field} buku sudah terdaftar'
+                    'required' => '{field} admin harus diisi'
                 ]
             ],
-            'gambar' => [
-                'rules' => 'max_size[gambar, 1024]|is_image[gambar]|mime_in[gambar,image/jpg,image/png,image/jpeg]',
+            'admin_foto' => [
+                'rules' => 'max_size[admin_foto, 1024]|is_image[admin_foto]|mime_in[admin_foto,image/jpg,image/png,image/jpeg]',
                 'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar',
-                    'is_image' => 'Yang anda pilih bukanlah gambar',
-                    'mime_in' => 'Format gambar tidak sesuai'
+                    'max_size' => 'Ukuran foto terlalu besar',
+                    'is_image' => 'Yang anda pilih bukanlah foto',
+                    'mime_in' => 'Format foto tidak sesuai'
 
                 ]
             ]
         ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/buku/ubah/' . $this->request->getVar('slug'))->withInput()->with('validation', $validation);
-            return redirect()->to('/buku/ubah/' . $this->request->getVar('slug'))->withInput();
+            return redirect()->to('/admin/ubahadmin/' . $this->request->getVar('admin_id'))->withInput();
         }
 
-        $fileGambar = $this->request->getFile('gambar');
+        $fileFoto = $this->request->getFile('admin_foto');
 
-        //apabila tidak ada gambar yang diupload
-        if ($fileGambar->getError() == 4) {
-            $namaGambar = $this->request->getVar('gambarLama');
+        //apabila tidak ada admin_foto yang diupload
+        if ($fileFoto->getError() == 4) {
+            $namaFoto = $this->request->getVar('fotoLama');
         } else {
             //generate nama sampul random
-            $namaGambar = $fileGambar->getRandomName();
-            //pindahkan gambar ke folder img
-            $fileGambar->move('img', $namaGambar);
+            $namaFoto = $fileFoto->getRandomName();
+            //pindahkan admin_foto ke folder img
+            $fileFoto->move('img', $namaFoto);
             //hapus file yg lama
-            unlink('img/' . $this->request->getVar('gambarLama'));
+            unlink('img/' . $this->request->getVar('fotoLama'));
         }
 
-        $slug = url_title($this->request->getVar('judul'), '-', true);
-        $this->bukuModel->save(
+        $this->adminModel->save(
             [
-                'id_buku' => $id_buku,
-                'judul' => $this->request->getVar('judul'),
-                'slug' => $slug,
-                'penulis' => $this->request->getVar('penulis'),
-                'penerbit' => $this->request->getVar('penerbit'),
-                'isbn' => $this->request->getVar('isbn'),
-                'stok' => $this->request->getVar('stok'),
-                'halaman' => $this->request->getVar('halaman'),
-                'kategori' => $this->request->getVar('kategori'),
-                'sinopsis' => $this->request->getVar('sinopsis'),
-                'gambar' => $namaGambar
+                'admin_id' => $admin_id,
+                'admin_nama' => $this->request->getVar('admin_nama'),
+                'users_id' => $this->request->getVar('users_id'),
+                'admin_foto' => $namaFoto
             ]
         );
 
         session()->setFlashdata('pesan', 'Data berhasil diubah.');
 
-        return redirect()->to('/buku');
+        return redirect()->to('/admin');
     }
 }

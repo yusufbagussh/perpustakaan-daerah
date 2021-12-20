@@ -111,6 +111,24 @@ class Anggota extends BaseController
         return redirect()->to('/pages');
     }
 
+    public function deleteAnggota($anggota_id)
+    {
+        //jika ingin sekaligus menghapus gambar pada direktori
+
+        //cari gamber berdasarkan anggota_id
+        $anggota = $this->anggotaModel->find($anggota_id);
+
+        //cek jika gambarnya default
+        if ($anggota['admin_foto'] != 'default.png') {
+            //hapus gambar
+            unlink('img/' . $anggota['admin_foto']);
+        }
+
+        $this->anggotaModel->delete($anggota_id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        return redirect()->to('/anggota');
+    }
+
     public function ubahAnggota($anggota_id)
     {
         session();
@@ -131,7 +149,7 @@ class Anggota extends BaseController
         return view('anggota/ubahanggota', $data);
     }
 
-    public function update($anggota_id)
+    public function updateAnggota($anggota_id)
     {
         if (!$this->validate([
             'anggota_nama' => [

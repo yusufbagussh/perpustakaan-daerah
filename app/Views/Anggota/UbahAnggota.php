@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/anggota/update/<?= $anggota['id_buku']; ?>">
+            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/anggota/ubahanggota/<?= $anggota['id_buku']; ?>">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="fotoLama" value="<?= $anggota['anggota_foto']; ?>">
                 <div class="form-group row">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Ubah Buku</button>
+                        <button type="submit" class="btn btn-primary">Ubah Identitas Anggota</button>
                     </div>
                 </div>
             </form>

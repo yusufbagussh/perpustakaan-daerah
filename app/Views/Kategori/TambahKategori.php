@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" action="/anggota/tambahdata" enctype="multipart/form-data">
+            <form class="mt-3" method="POST" action="/anggota/tambahkategori" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="id_kategori" class="col-sm-2 col-form-label">ID Kategori</label>
