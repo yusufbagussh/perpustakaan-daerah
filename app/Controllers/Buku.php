@@ -15,6 +15,7 @@ class Buku extends BaseController
         $this->kategoriModel = new KategoriModel();
     }
 
+
     public function index()
     {
 
