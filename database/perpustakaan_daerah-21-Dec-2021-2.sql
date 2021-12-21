@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2021 at 09:54 AM
+-- Generation Time: Dec 21, 2021 at 10:05 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -285,15 +285,15 @@ CREATE TABLE `buku` (
   `buku_halaman` smallint(6) NOT NULL,
   `buku_gambar` varchar(50) NOT NULL,
   `buku_sinopsis` text NOT NULL,
-  `buku_created_at` datetime DEFAULT NULL,
-  `buku_updated_at` datetime DEFAULT NULL
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `buku`
 --
 
-INSERT INTO `buku` (`buku_id`, `buku_slug`, `buku_judul`, `buku_penulis`, `buku_penerbit`, `buku_kategori_id`, `buku_isbn`, `buku_stok`, `buku_halaman`, `buku_gambar`, `buku_sinopsis`, `buku_created_at`, `buku_updated_at`) VALUES
+INSERT INTO `buku` (`buku_id`, `buku_slug`, `buku_judul`, `buku_penulis`, `buku_penerbit`, `buku_kategori_id`, `buku_isbn`, `buku_stok`, `buku_halaman`, `buku_gambar`, `buku_sinopsis`, `created_at`, `updated_at`) VALUES
 (35, 'habis-gelap-terbitlah-terang1', 'Habis Gelap Terbitlah Terang1', 'R. A. Kartini', 'Balai Pustaka123', 1, 'ISBN 979-407-063-7', 4, 204, 'perpussekolah1623668273.jpg', 'Habis Gelap Terbitlah Terang adalah buku kumpulan surat yang ditulis oleh Kartini. Kumpulan surat tersebut dibukukan oleh J.H. Abendanon dengan judul Door Duisternis Tot Licht. Setelah Kartini wafat, J.H. Abendanon mengumpulkan dan membukukan surat-surat yang pernah dikirimkan R.A Kartini pada teman-temannya di Eropa', NULL, '2021-12-14 03:12:31'),
 (37, 'milea-suara-dari-dilan', 'Milea Suara dari Dilan', 'Pidi Baiq', 'Pastel BOOKS', 1, '978-602-0851-56-3', 0, 367, 'perpussekolah1623911192.jpg', 'Tidak ada kisah yang lebih Indah dari kisah cinta di SMA.Sama halnya dengan kisah cinta Dilan dan Milea.Dari yang awalnya benci hingga saling mencintai. Dari yang awalnya manis hingga menjadi rumit.Menjelang reuni akbar,Dilan memutuskan untuk menceritakan kembali masa masa itu.\r\n', NULL, NULL),
 (38, 'matahari', 'Matahari', 'Tere Liye', 'Gramedia Pustaka Utama', 1, '978-602-03-3211-6', 4, 400, 'perpussekolah1623911284.jpg', 'Raib, Ali, dan Seli dirundung duka atas tewasnya Ily, sahabat mereka, pada pertarungan di Klan Matahari. Tak hanya mereka, para kesatria Klan Bulan juga merasakan hal sama, sampai membuat Miss Selena tak bisa kembali ke Klan Bumi.', NULL, NULL),
