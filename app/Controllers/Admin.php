@@ -29,6 +29,15 @@ class Admin extends BaseController
         return view('admin/listadmin', $data);
     }
 
+    public function profil()
+    {
+        $data = [
+            'judul' => 'Daftar Admin Perpustakaan',
+        ];
+
+        return view('admin/profil', $data);
+    }
+
     public function tambahAdmin()
     {
         session();

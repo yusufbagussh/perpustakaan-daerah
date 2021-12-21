@@ -24,4 +24,8 @@ class AdminModel extends Model
             return $this->where(['admin_id' => $admin_id])->first();
         }
     }
+
+    public function getProfilAdmin()
+    {
+    }
 }
