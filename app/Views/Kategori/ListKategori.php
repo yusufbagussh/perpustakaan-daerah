@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="/buku/tambah" class="btn btn-primary mb-3">Tambah Data Buku</a>
+            <a href="/kategori/tambahkategori" class="btn btn-primary mb-3">Tambah Kategori</a>
 
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success">
@@ -34,21 +34,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1 + (3 * ($currentPage - 1)); ?>
+                    <?php $i = 1; ?>
                     <?php foreach ($kategori as $k) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><?= $k['id_kategori']; ?></td>
-                            <td><?= $k['nama_kategori']; ?></td>
+                            <td><?= $k['kategori_id']; ?></td>
+                            <td><?= $k['kategori_nama']; ?></td>
                             <td>
-                                <a href="/buku/<?= $b['slug']; ?>" class="btn btn-success">Detail</a>
-                                <form action="/buku/<?= $buku['id_buku']; ?>" method="POST" class="d-inline">
+                                <a href="/kategori/ubahkategori/<?= $k['kategori_id']; ?>" class="btn btn-warning">Edit</a>
+                                <form action="/kategori/hapuskategori/<?= $k['kategori_id']; ?>" method="POST" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
                                 </form>
-
-                                <a href="/buku/tambah" class="btn btn-primary">Tambah Data Buku</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

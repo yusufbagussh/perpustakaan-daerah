@@ -6,7 +6,7 @@ use App\Models\KategoriModel;
 use App\Models\AnggotaModel;
 use \Myth\Auth\Models\UserModel;
 
-class Anggota extends BaseController
+class Kategori extends BaseController
 {
 
     public function __construct()
@@ -16,7 +16,7 @@ class Anggota extends BaseController
         $this->userModel = new UserModel();
     }
 
-    public function listKategori()
+    public function index()
     {
         $data = [
             'kategori' =>  $this->kategoriModel->findAll(),
@@ -26,7 +26,7 @@ class Anggota extends BaseController
         return view('kategori/listkategori', $data);
     }
 
-    public function tambahKategori()
+    public function tambahkategori()
     {
         session();
         $data = [
@@ -37,23 +37,16 @@ class Anggota extends BaseController
         return view('kategori/tambahkategori', $data);
     }
 
-    public function simpanKategori()
+    public function simpankategori()
     {
         //validasi input
         if (!$this->validate([
-            'id_kategori' => [
-                'rules' => 'required|is_unique[kategori.id_kategori]',
+            'kategori_nama' => [
+                'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} id kategori harus diisi',
-                    'is_unique' => '{field} id kategori sudah terdaftar'
+                    'required' => '{field} admin harus diisi'
                 ]
             ],
-            'nama_kategori' => [
-                'rules' => 'required|is_unique[kategori.nama_kategori]',
-                'errors' => [
-                    'required' => '{field} nama kategori harus diisi'
-                ]
-            ]
         ])) {
             //$validation = \Config\Services::validation();
             return redirect()->to('/kategori/tambahkategori')->withInput();
@@ -61,8 +54,7 @@ class Anggota extends BaseController
 
         $this->kategoriModel->save(
             [
-                'id_kategori' => $this->request->getVar('id_kategori'),
-                'nama_kategori' => $this->request->getVar('nama_kategori')
+                'kategori_nama' => $this->request->getVar('kategori_nama')
             ]
         );
 
@@ -71,18 +63,24 @@ class Anggota extends BaseController
         return redirect()->to('/kategori');
     }
 
-    public function ubahKategori($id_kategori)
+    public function hapusKategori($kategori_id)
+    {
+        $this->kategoriModel->delete($kategori_id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        return redirect()->to('/kategori');
+    }
+
+    public function ubahKategori($kategori_id)
     {
         session();
 
-        $kategori = $this->kategoriModel->find($id_kategori);
+        $kategori = $this->kategoriModel->getKategori($kategori_id);
         //$kategori = $this->kategoriModel->getKategori();
         if (empty($kategori)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Anggota Tidak ditemukan !');
         }
         $data = [
-            'anggota' => $kategori,
-            //'kategori' => $kategori,
+            'kategori' => $kategori,
             'validation' => \Config\Services::validation(),
             'judul' => "Form Ubah Data Kategori"
         ];
@@ -91,11 +89,11 @@ class Anggota extends BaseController
         return view('kategori/ubahkategori', $data);
     }
 
-    public function updateKategori($id_kategori)
+    public function updateKategori($kategori_id)
     {
         if (!$this->validate([
-            'id_kategori' => [
-                'rules' => 'required|is_unique[kategori.id_kategori]',
+            'kategori_id' => [
+                'rules' => 'required|is_unique[kategori.kategori_id]',
                 'errors' => [
                     'required' => '{field} id kategori harus diisi',
                     'is_unique' => '{field} id kategori sudah terdaftar'
@@ -110,13 +108,13 @@ class Anggota extends BaseController
         ])) {
             // $validation = \Config\Services::validation();
             // return redirect()->to('/anggota/ubah/' . $this->request->getVar('slug'))->withInput()->with('validation', $validation);
-            return redirect()->to('/kategori/ubahkategori/' . $this->request->getVar('id_kategori'))->withInput();
+            return redirect()->to('/kategori/ubahkategori/' . $this->request->getVar('kategori_id'))->withInput();
         }
 
         //$slug = url_title($this->request->getVar('anggota_nama'), '-', true);
         $this->kategoriModel->save(
             [
-                'id_kategori' => $id_kategori,
+                'kategori_id' => $kategori_id,
                 'nama_kategori' => $this->request->getVar('nama_kategori')
             ]
         );

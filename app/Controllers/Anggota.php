@@ -14,22 +14,22 @@ class Anggota extends BaseController
         $this->userModel = new UserModel();
     }
 
-    public function listAnggota()
+    public function index()
     {
         $data = [
             'anggota' =>  $this->anggotaModel->findAll(),
-            'judul' => 'Daftar Buku Perpustakaan'
+            'judul' => 'Daftar Anggota Perpustakaan'
         ];
 
-        return view('anggota/listbuku', $data);
+        return view('anggota/listanggota', $data);
     }
 
     public function detailAnggota($anggota_id)
     {
         $anggota = $this->anggotaModel->getAnggota($anggota_id);
         $data = [
-            'anggota' =>  $anggota[0],
-            'judul' => 'Daftar Buku Perpustakaan'
+            'anggota' =>  $anggota,
+            'judul' => 'Detail Anggota Perpustakaan'
         ];
 
         //jika anggota tidak ada
@@ -37,7 +37,7 @@ class Anggota extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('id anggota ' . $anggota_id . ' tidak ditemukan');
         };
 
-        return view('anggota/detailbuku', $data);
+        return view('anggota/detailanggota', $data);
     }
 
     public function tambahAnggota()
@@ -93,7 +93,6 @@ class Anggota extends BaseController
         $this->anggotaModel->save(
             [
                 'anggota_nama' => $this->request->getVar('anggota_nama'),
-                // 'slug' => $slug,
                 'anggota_username' => $this->request->getVar('anggota_username'),
                 'anggota_jenis_kelamin' => $this->request->getVar('anggota_jenis_kelamin'),
                 'anggota_tempat_lahir' => $this->request->getVar('anggota_tempat_lahir'),
@@ -108,7 +107,7 @@ class Anggota extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil dimasukkan.');
 
-        return redirect()->to('/pages');
+        return redirect()->to('/anggota');
     }
 
     public function deleteAnggota($anggota_id)
@@ -119,9 +118,9 @@ class Anggota extends BaseController
         $anggota = $this->anggotaModel->find($anggota_id);
 
         //cek jika gambarnya default
-        if ($anggota['admin_foto'] != 'default.png') {
+        if ($anggota['anggota_foto'] != 'default.png') {
             //hapus gambar
-            unlink('img/' . $anggota['admin_foto']);
+            unlink('img/' . $anggota['anggota_foto']);
         }
 
         $this->anggotaModel->delete($anggota_id);

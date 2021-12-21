@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/admin/ubahadmin/<?= $admin['id_buku']; ?>">
+            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/admin/ubahadmin/<?= $admin['admin_id']; ?>">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="fotoLama" value="<?= $admin['admin_foto']; ?>">
                 <div class="form-group row">

@@ -5,21 +5,15 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" action="/anggota/tambahkategori" enctype="multipart/form-data">
+            <form class="mt-3" method="POST" action="/kategori/tambahkategori" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
-                    <label for="id_kategori" class="col-sm-2 col-form-label">ID Kategori</label>
+                    <label for="kategori_nama" class="col-sm-2 col-form-label">Nama Kategori</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('id_kategori')) ? 'is-invalid' : ''; ?>" id="id_kategori" name="id_kategori" autofocus value="<?= old('id_kategori'); ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('kategori_nama')) ? 'is-invalid' : ''; ?>" id="kategori_nama" name="kategori_nama" autofocus value="<?= old('kategori_nama'); ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('id_kategori'); ?>
+                            <?= $validation->getError('kategori_nama'); ?>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="nama_kategori" class="col-sm-2 col-form-label">Nama Kategroi</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?= old('nama_kategori'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">

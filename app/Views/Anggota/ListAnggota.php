@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="/anggota/tambahanggota" class="btn btn-primary mb-3">Tambah Data Buku</a>
+            <a href="/anggota/tambahanggota" class="btn btn-primary mb-3">Tambah Anggota</a>
 
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success">
@@ -36,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1 + (3 * ($currentPage - 1)); ?>
+                    <?php $i = 1; ?>
                     <?php foreach ($anggota as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
@@ -44,7 +44,7 @@
                             <td><?= $a['anggota_nama']; ?></td>
                             <td><?= $a['anggota_username']; ?></td>
                             <td><?= $a['anggota_nomor_identitas']; ?></td>
-                            <td><a href="/anggota/<?= $a['anggota_id']; ?>" class="btn btn-success">Detail</a></td>
+                            <td><a href="/anggota/detailanggota/<?= $a['anggota_id']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

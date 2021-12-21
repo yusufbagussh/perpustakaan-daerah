@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class BukuModel extends Model
 {
     protected $table      = 'buku';
-    protected $primaryKey = 'id_buku';
+    protected $primaryKey = 'buku_id';
     protected $useTimestamps = true;
     protected $allowedFields = [
         'buku_id',
@@ -25,27 +25,27 @@ class BukuModel extends Model
         'buku_updated_at'
     ];
 
-    public function getBuku($slug = false)
+    public function getBuku($buku_slug = false)
     {
-        if ($slug == false) {
+        if ($buku_slug == false) {
             return $this->findAll();
         }
 
         // return
         //     $this->db->table('buku')
         //     ->join('kategori', 'buku.kategori=kategori.id_kategori')
-        //     ->where("buku.slug='" . $slug . "'")
+        //     ->where("buku.buku_slug='" . $buku_slug . "'")
         //     ->get()->getResultArray();
 
-        return $this->where(['buku_slug' => $slug])->first();
+        return $this->where(['buku_slug' => $buku_slug])->first();
     }
 
-    public function getBukuDetail($id_buku)
+    public function getBukuDetail($buku_id)
     {
         return
             $this->db->table('buku')
             ->join('kategori', 'buku.buku_kategori=kategori.kategori_id')
-            ->where("buku.buku_id='" . $id_buku . "'")
+            ->where("buku.buku_id='" . $buku_id . "'")
             ->get()->getResultArray();
     }
 

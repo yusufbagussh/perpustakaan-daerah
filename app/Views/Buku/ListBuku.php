@@ -40,11 +40,11 @@
                     <?php foreach ($buku as $b) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $b['gambar']; ?>" alt="" class="sampul"></td>
-                            <td><?= $b['judul']; ?></td>
-                            <td><?= $b['penulis']; ?></td>
-                            <td><?= $b['nama_kategori']; ?></td>
-                            <td><a href="/buku/<?= $b['slug']; ?>" class="btn btn-success">Detail</a></td>
+                            <td><img src="/img/<?= $b['buku_gambar']; ?>" alt="" class="sampul"></td>
+                            <td><?= $b['buku_judul']; ?></td>
+                            <td><?= $b['buku_penulis']; ?></td>
+                            <td><?= $b['kategori_nama']; ?></td>
+                            <td><a href="/buku/<?= $b['buku_slug']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

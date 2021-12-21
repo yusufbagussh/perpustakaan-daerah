@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="/admin/tambahadmin" class="btn btn-primary mb-3">Tambah Data Buku</a>
+            <a href="/admin/tambahadmin" class="btn btn-primary mb-3">Tambah Admin</a>
 
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success">
@@ -28,27 +28,28 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">ID Admin</th>
-                        <th scope="col">Nama Admin</th>
                         <th scope="col">Foto</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1 + (3 * ($currentPage - 1)); ?>
+                    <?php $i = 1; ?>
                     <?php foreach ($admin as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
                             <td><img src="/img/<?= $a['admin_foto']; ?>" alt="" class="sampul"></td>
                             <td><?= $a['admin_id']; ?></td>
                             <td><?= $a['admin_nama']; ?></td>
-                            <td><a href="/admin/<?= $a['anggota_id']; ?>" class="btn btn-success">Detail</a></td>
-                            <a href="/admin/ubahanggota/<?= $a['anggota_id']; ?>" class="btn btn-warning">Edit</a>
-                            <form action="/admin/<?= $a['anggota_id']; ?>" method="POST" class="d-inline">
-                                <?= csrf_field(); ?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
-                            </form>
+                            <td>
+                                <a href="/admin/ubahadmin/<?= $a['admin_id']; ?>" class="btn btn-warning">Edit</a>
+                                <form action="/admin/hapusadmin/<?= $a['admin_id']; ?>" method="POST" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

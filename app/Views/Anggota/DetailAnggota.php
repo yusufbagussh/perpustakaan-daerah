@@ -21,7 +21,7 @@
 
                             <a href="/anggota/ubahanggota/<?= $anggota['anggota_id']; ?>" class="btn btn-warning">Edit</a>
 
-                            <form action="/anggota/<?= $anggota['anggota_id']; ?>" method="POST" class="d-inline">
+                            <form action="/anggota/deleteanggota/<?= $anggota['anggota_id']; ?>" method="POST" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>

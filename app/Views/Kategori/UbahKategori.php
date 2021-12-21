@@ -5,21 +5,21 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/kategori/ubahkategori/<?= $kategori['id_kategori']; ?>">
+            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/kategori/ubahkategori/<?= $kategori['kategori_id']; ?>">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
-                    <label for="id_kategori" class="col-sm-2 col-form-label">ID Kategori</label>
+                    <label for="kategori_id" class="col-sm-2 col-form-label">ID Kategori</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('id_kategori')) ? 'is-invalid' : ''; ?>" id="id_kategori" name="id_kategori" autofocus value="<?= (old('id_kategori')) ? old('id_kategori') : $kategori['id_kategori']; ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('kategori_id')) ? 'is-invalid' : ''; ?>" id="kategori_id" name="kategori_id" autofocus value="<?= (old('kategori_id')) ? old('kategori_id') : $kategori['kategori_id']; ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('id_kategori'); ?>
+                            <?= $validation->getError('kategori_id'); ?>
                         </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="nama_kategori" class="col-sm-2 col-form-label">Nama Kategori</label>
+                    <label for="kategori_nama" class="col-sm-2 col-form-label">Nama Kategori</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?= (old('nama_kategori')) ? old('nama_kategori') : $kategori['nama_kategori']; ?>">
+                        <input type="text" class="form-control" id="kategori_nama" name="kategori_nama" value="<?= (old('kategori_nama')) ? old('kategori_nama') : $kategori['kategori_nama']; ?>">
                     </div>
                 </div>
                 <div class="form-group row">

@@ -10,12 +10,12 @@ class KategoriModel extends Model
     protected $primaryKey = 'kategori_id';
     protected $allowedFields = ['kategori_id', 'kategori_nama'];
 
-    public function getKategori($id_kategori = "")
+    public function getKategori($kategori_id = "")
     {
-        if ($id_kategori == "") {
+        if ($kategori_id == "") {
             return $this->findAll();
         } else {
-            return $this->where(['kategori_id' => $id_kategori])->first();
+            return $this->where(['kategori_id' => $kategori_id])->first();
         }
     }
 }

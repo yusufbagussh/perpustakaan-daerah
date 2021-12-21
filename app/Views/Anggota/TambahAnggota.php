@@ -37,13 +37,13 @@
                 <div class="form-group row">
                     <label for="anggota_tanggal_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="anggota_tanggal_lahir" name="anggota_tanggal_lahir" value="<?= old('anggota_tanggal_lahir'); ?>">
+                        <input type="date" class="form-control" id="anggota_tanggal_lahir" name="anggota_tanggal_lahir" value="<?= old('anggota_tanggal_lahir'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="anggota_alamat" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="anggota_alamat" name="anggota_alamat" value="<?= old('anggota_alamat'); ?>">
+                        <input type="text" class="form-control" id="anggota_alamat" name="anggota_alamat" value="<?= old('anggota_alamat'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">
