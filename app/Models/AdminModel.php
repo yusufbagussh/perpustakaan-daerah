@@ -15,33 +15,13 @@ class AdminModel extends Model
         'users_id'
     ];
 
-    public function getBuku($id_buku = "")
+
+    public function getAdmin($admin_id = "")
     {
-        if ($id_buku == "") {
+        if ($admin_id == "") {
             return $this->findAll();
         } else {
-            return $this->where(['id_buku' => $id_buku])->first();
+            return $this->where(['admin_id' => $admin_id])->first();
         }
     }
-    public function saveBuku($data)
-    {
-        return $this->db->table($this->table)->insert($data);;
-    }
-
-    public function getBukuKategori()
-    {
-        return
-            $this->db->table('buku')
-            ->join('kategori', 'buku.kategori=kategori.id_kategori')
-            ->get()->getResultArray();
-    }
-
-    public function getBukuKategoriDetail($id_buku)
-    {
-        return
-            $this->db->table('buku')
-            ->join('kategori', 'buku.kategori=kategori.id_kategori')
-            ->where("buku.id_buku='" . $id_buku . "'")
-            ->get()->getResultArray();
-    }
-}//end class
+}

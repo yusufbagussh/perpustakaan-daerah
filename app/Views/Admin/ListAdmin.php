@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h1>Daftar Buku</h1>
+            <h1>Daftar Admin Perpustakaan</h1>
             <form action="" method="POST">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Masukkan Keyword" name="keyword">
@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="/buku/tambah" class="btn btn-primary mb-3">Tambah Data Buku</a>
+            <a href="/admin/tambahadmin" class="btn btn-primary mb-3">Tambah Admin</a>
 
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success">
@@ -28,23 +28,28 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Sampul</th>
-                        <th scope="col">Judul</th>
-                        <th scope="col">Penulis</th>
-                        <th scope="col">Kategori</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1 + (3 * ($currentPage - 1)); ?>
-                    <?php foreach ($buku as $b) : ?>
+                    <?php $i = 1; ?>
+                    <?php foreach ($admin as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $b['buku_gambar']; ?>" alt="" class="sampul"></td>
-                            <td><?= $b['buku_judul']; ?></td>
-                            <td><?= $b['buku_penulis']; ?></td>
-                            <td><?= $b['kategori_nama']; ?></td>
-                            <td><a href="/buku/<?= $b['buku_slug']; ?>" class="btn btn-success">Detail</a></td>
+                            <td><img src="/img/<?= $a['admin_foto']; ?>" alt="" class="sampul"></td>
+                            <td><?= $a['admin_id']; ?></td>
+                            <td><?= $a['admin_nama']; ?></td>
+                            <td>
+                                <a href="/admin/ubahadmin/<?= $a['admin_id']; ?>" class="btn btn-warning">Edit</a>
+                                <form action="/admin/hapusadmin/<?= $a['admin_id']; ?>" method="POST" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" action="/anggota/tambahdata" enctype="multipart/form-data">
+            <form class="mt-3" method="POST" action="/anggota/simpananggota" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="anggota_nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('anggota_nama')) ? 'is-invalid' : ''; ?>" id="anggota_nama" name="anggota_nama" autofocus value="<?= old('judul'); ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('anggota_nama')) ? 'is-invalid' : ''; ?>" id="anggota_nama" name="anggota_nama" autofocus value="<?= old('anggota_nama'); ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('anggota_nama'); ?>
                         </div>
@@ -37,13 +37,13 @@
                 <div class="form-group row">
                     <label for="anggota_tanggal_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="anggota_tanggal_lahir" name="anggota_tanggal_lahir" value="<?= old('anggota_tanggal_lahir'); ?>">
+                        <input type="date" class="form-control" id="anggota_tanggal_lahir" name="anggota_tanggal_lahir" value="<?= old('anggota_tanggal_lahir'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="anggota_alamat" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="anggota_alamat" name="anggota_alamat" value="<?= old('anggota_alamat'); ?>">
+                        <input type="text" class="form-control" id="anggota_alamat" name="anggota_alamat" value="<?= old('anggota_alamat'); ?>">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -81,7 +81,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Tambah Buku</button>
+                        <button type="submit" class="btn btn-primary">Tambah Anggota</button>
                     </div>
                 </div>
             </form>

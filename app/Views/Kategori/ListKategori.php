@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h1>Daftar Buku</h1>
+            <h1><?= $judul; ?></h1>
             <form action="" method="POST">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Masukkan Keyword" name="keyword">
@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <a href="/buku/tambah" class="btn btn-primary mb-3">Tambah Data Buku</a>
+            <a href="/kategori/tambahkategori" class="btn btn-primary mb-3">Tambah Kategori</a>
 
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success">
@@ -28,23 +28,26 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Sampul</th>
-                        <th scope="col">Judul</th>
-                        <th scope="col">Penulis</th>
-                        <th scope="col">Kategori</th>
+                        <th scope="col">ID Kategori</th>
+                        <th scope="col">Nama Kategori</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1 + (3 * ($currentPage - 1)); ?>
-                    <?php foreach ($buku as $b) : ?>
+                    <?php $i = 1; ?>
+                    <?php foreach ($kategori as $k) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $b['gambar']; ?>" alt="" class="sampul"></td>
-                            <td><?= $b['judul']; ?></td>
-                            <td><?= $b['penulis']; ?></td>
-                            <td><?= $b['nama_kategori']; ?></td>
-                            <td><a href="/buku/<?= $b['slug']; ?>" class="btn btn-success">Detail</a></td>
+                            <td><?= $k['kategori_id']; ?></td>
+                            <td><?= $k['kategori_nama']; ?></td>
+                            <td>
+                                <a href="/kategori/ubahkategori/<?= $k['kategori_id']; ?>" class="btn btn-warning">Edit</a>
+                                <form action="/kategori/hapuskategori/<?= $k['kategori_id']; ?>" method="POST" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

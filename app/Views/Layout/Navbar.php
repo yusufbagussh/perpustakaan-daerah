@@ -10,6 +10,9 @@
                 <a class="nav-link" href="/pages/about">About</a>
                 <a class="nav-link" href="<?= base_url('/pages/contact') ?>">Contact</a>
                 <a class="nav-link" href="<?= base_url('/buku/index') ?>">Book</a>
+                <a class="nav-link" href="<?= base_url('/kategori/index') ?>">Kategori</a>
+                <a class="nav-link" href="<?= base_url('/anggota/index') ?>">Anggota</a>
+                <a class="nav-link" href="<?= base_url('/admin/index') ?>">Admin</a>
             </div>
             <?php if (logged_in()) : ?>
                 <a class="nav-link" href="/logout">Logout</a>
