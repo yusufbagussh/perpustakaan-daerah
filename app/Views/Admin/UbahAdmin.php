@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/admin/ubahadmin/<?= $admin['admin_id']; ?>">
+            <form class="mt-3" method="POST" enctype="multipart/form-data" action="/admin/updateadmin/<?= $admin['admin_id']; ?>">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="fotoLama" value="<?= $admin['admin_foto']; ?>">
                 <div class="form-group row">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('admin_foto')) ? 'is-invalid' : ''; ?>" id="admin_foto" name="admin_foto" onchange="previewImg()">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('admin_foto')) ? 'is-invalid' : ''; ?>" id="gambar" name="admin_foto" onchange="previewImg()">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('admin_foto'); ?>
                             </div>
@@ -48,5 +48,20 @@
         </div>
     </div>
 </div>
+<script>
+    function previewImg() {
+        const admin_foto = document.querySelector('#gambar');
+        const gambarLabel = document.querySelector('.custom-file-label')
+        const imgPreview = document.querySelector('.img-preview');
 
+        gambarLabel.textContent = admin_foto.files[0].name;
+
+        const fileGambar = new FileReader();
+        fileGambar.readAsDataURL(admin_foto.files[0]);
+
+        fileGambar.onload = function(e) {
+            imgPreview.src = e.target.result;
+        }
+    }
+</script>
 <?= $this->endSection('content'); ?>

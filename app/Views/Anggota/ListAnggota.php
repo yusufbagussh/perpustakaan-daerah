@@ -30,7 +30,6 @@
                         <th scope="col">No</th>
                         <th scope="col">Foto</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">Username</th>
                         <th scope="col">Nomor Indentitas</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -42,7 +41,6 @@
                             <th scope="row"><?= $i++; ?></th>
                             <td><img src="/img/<?= $a['anggota_foto']; ?>" alt="" class="sampul"></td>
                             <td><?= $a['anggota_nama']; ?></td>
-                            <td><?= $a['anggota_username']; ?></td>
                             <td><?= $a['anggota_nomor_identitas']; ?></td>
                             <td><a href="/anggota/detailanggota/<?= $a['anggota_id']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
