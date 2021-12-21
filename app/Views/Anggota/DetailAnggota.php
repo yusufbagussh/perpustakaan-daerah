@@ -1,6 +1,5 @@
-<?= $this->extend('layout/template'); ?>
-
-<?= $this->section('content'); ?>
+<?= $this->extend('/admin/templates/index'); ?>
+<?= $this->section('page-content'); ?>
 
 <div class="container">
     <div class="row">

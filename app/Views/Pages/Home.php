@@ -10,9 +10,13 @@
             ?>
                 <h1>Selamat Datang di E-Library, Anda Login sebagai Member</h1>
             <?php
-            } else {
+            } else if (in_groups('member')) {
             ?>
                 <h1>Selamat Datang di E-Library, Anda Login sebagai Admin</h1>
+            <?php
+            } else {
+            ?>
+                <h1>Selamat Datang di E-Library</h1>
             <?php
             }
             ?>
