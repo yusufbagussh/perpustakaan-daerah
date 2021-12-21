@@ -18,8 +18,9 @@
                 </div>
                 <div class="form-group row">
                     <label for="anggota_jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="anggota_jenis_kelamin" name="anggota_jenis_kelamin" value="<?= old('anggota_jenis_kelamin'); ?>">
+                    <div class="col-sm-10 mt-2">
+                        <input type="radio" name="anggota_jenis_kelamin" value="Laki - Laki"> Laki - Laki
+                        <input type="radio" name="anggota_jenis_kelamin" value="Perempuan"> Perempuan
                     </div>
                 </div>
                 <div class="form-group row">

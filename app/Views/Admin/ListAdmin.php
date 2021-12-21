@@ -39,7 +39,7 @@
                     <?php foreach ($admin as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $a['admin_foto']; ?>" alt="" class="sampul"></td>
+                            <td><img src="/img/profile/<?= $a['admin_foto']; ?>" alt="" class="sampul" style="width: 100px;"></td>
                             <td><?= $a['admin_id']; ?></td>
                             <td><?= $a['admin_nama']; ?></td>
                             <td>

@@ -86,8 +86,8 @@ class Anggota extends BaseController
         } else {
             //generate anggota_nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan anggota_foto ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan anggota_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
         }
 
         $this->anggotaModel->save(
@@ -119,7 +119,7 @@ class Anggota extends BaseController
         //cek jika gambarnya default
         if ($anggota['anggota_foto'] != 'default.png') {
             //hapus gambar
-            unlink('img/' . $anggota['anggota_foto']);
+            unlink('img/profile/' . $anggota['anggota_foto']);
         }
 
         $this->anggotaModel->delete($anggota_id);
@@ -152,10 +152,10 @@ class Anggota extends BaseController
         } else {
             //generate nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan anggota_foto ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan anggota_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
             //hapus file yg lama
-            unlink('img/' . $this->request->getVar('fotoLama'));
+            unlink('img/profile/' . $this->request->getVar('fotoLama'));
         }
 
         //$slug = url_title($this->request->getVar('anggota_nama'), '-', true);

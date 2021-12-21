@@ -59,7 +59,7 @@
                 <div class="form-group row">
                     <label for="buku_sinopsis" class="col-sm-2 col-form-label">Sinopsis</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="buku_sinopsis" name="buku_sinopsis" value="<?= old('buku_sinopsis'); ?>">
+                        <textarea name="buku_sinopsis" id="buku_sinopsis" class="form-control" cols="30" rows="10"><?= old('buku_sinopsis'); ?></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
