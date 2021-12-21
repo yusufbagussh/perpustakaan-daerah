@@ -21,8 +21,8 @@ class BukuModel extends Model
         'buku_halaman',
         'buku_gambar',
         'buku_sinopsis',
-        'buku_created_at',
-        'buku_updated_at'
+        'created_at',
+        'updated_at'
     ];
 
     public function getBuku($buku_slug = false)

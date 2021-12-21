@@ -121,7 +121,7 @@ class Buku extends BaseController
                 'buku_isbn' => $this->request->getVar('buku_isbn'),
                 'buku_stok' => $this->request->getVar('buku_stok'),
                 'buku_halaman' => $this->request->getVar('buku_halaman'),
-                'buku_kategori' => $this->request->getVar('buku_kategori'),
+                'buku_kategori_id' => $this->request->getVar('buku_kategori'),
                 'buku_sinopsis' => $this->request->getVar('buku_sinopsis'),
                 'buku_gambar' => $namaGambar
             ]
@@ -188,7 +188,7 @@ class Buku extends BaseController
                 'rules' => $rule_judul,
                 'errors' => [
                     'required' => '{field} buku harus diisi',
-                    'is_unique' => '{field} buku sudah terdaftar'
+                    // 'is_unique' => '{field} buku sudah terdaftar'
                 ]
             ],
             'buku_gambar' => [
@@ -231,7 +231,7 @@ class Buku extends BaseController
                 'buku_isbn' => $this->request->getVar('buku_isbn'),
                 'buku_stok' => $this->request->getVar('stok'),
                 'buku_halaman' => $this->request->getVar('buku_halaman'),
-                'buku_kategori' => $this->request->getVar('buku_kategori'),
+                'buku_kategori_id' => $this->request->getVar('buku_kategori'),
                 'buku_sinopsis' => $this->request->getVar('buku_sinopsis'),
                 'buku_gambar' => $namaGambar
             ]
