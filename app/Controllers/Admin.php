@@ -81,8 +81,8 @@ class Admin extends BaseController
         } else {
             //generate nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan admin_foto ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan admin_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
         }
 
         $this->adminModel->save(
@@ -108,7 +108,7 @@ class Admin extends BaseController
         //cek jika gambarnya default
         if ($admin['admin_foto'] != 'default.png') {
             //hapus admin_foto
-            unlink('img/' . $admin['admin_foto']);
+            unlink('img/profile/' . $admin['admin_foto']);
         }
 
         $this->adminModel->delete($admin_id);
@@ -163,10 +163,10 @@ class Admin extends BaseController
         } else {
             //generate nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan admin_foto ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan admin_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
             //hapus file yg lama
-            unlink('img/' . $this->request->getVar('fotoLama'));
+            unlink('img/profile/' . $this->request->getVar('fotoLama'));
         }
 
         $this->adminModel->save(
