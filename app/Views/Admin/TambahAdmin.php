@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('admin_foto')) ? 'is-invalid' : ''; ?>" id="admin_foto" name="admin_foto" onchange="previewImg()">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('admin_foto')) ? 'is-invalid' : ''; ?>" id="gambar" name="admin_foto" onchange="previewImg()">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('admin_foto'); ?>
                             </div>
@@ -49,7 +49,7 @@
 </div>
 <script>
     function previewImg() {
-        const admin_foto = document.querySelector('#admin_foto');
+        const admin_foto = document.querySelector('#gambar');
         const gambarLabel = document.querySelector('.custom-file-label')
         const imgPreview = document.querySelector('.img-preview');
 

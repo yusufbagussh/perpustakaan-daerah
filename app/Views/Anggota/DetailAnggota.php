@@ -16,8 +16,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"><?= $anggota['anggota_nama']; ?></h5>
-                            <p class="card-text"> <b>Penulis</b> : <?= $anggota['anggota_username']; ?></p>
-                            <p class="card-text"><small class="text-muted"><b>Perbit</b>: <?= $anggota['anggota_nomor_identitas']; ?></small></p>
+                            <p class="card-text"><small class="text-muted"><b>Nomor Identitas</b>: <?= $anggota['anggota_nomor_identitas']; ?></small></p>
 
                             <a href="/anggota/ubahanggota/<?= $anggota['anggota_id']; ?>" class="btn btn-warning">Edit</a>
 
