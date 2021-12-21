@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="icon" href="<?= base_url() ?>/favicon.svg" type="image/gif">
     <title>E-Perpustakaan | Admin</title>
 
     <!-- Custom fonts for this template-->

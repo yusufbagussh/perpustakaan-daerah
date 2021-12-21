@@ -30,22 +30,20 @@ class BukuModel extends Model
         if ($buku_slug == false) {
             return $this->findAll();
         }
-
         // return
         //     $this->db->table('buku')
         //     ->join('kategori', 'buku.kategori=kategori.id_kategori')
         //     ->where("buku.buku_slug='" . $buku_slug . "'")
         //     ->get()->getResultArray();
-
         return $this->where(['buku_slug' => $buku_slug])->first();
     }
 
-    public function getBukuDetail($buku_id)
+    public function getBukuDetail($buku_slug)
     {
         return
             $this->db->table('buku')
             ->join('kategori', 'buku.buku_kategori_id=kategori.kategori_id')
-            ->where("buku.buku_id='" . $buku_id . "'")
+            ->where(['buku_slug' => $buku_slug])
             ->get()->getResultArray();
     }
 

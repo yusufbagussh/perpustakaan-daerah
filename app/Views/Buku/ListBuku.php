@@ -19,9 +19,14 @@
         <div class="col">
             <a href="/buku/tambah" class="btn btn-primary mb-3">Tambah Data Buku</a>
 
-            <?php if (session()->getFlashdata('pesan')) : ?>
+            <?php if (session()->getFlashdata('tambah')) : ?>
                 <div class="alert alert-success">
-                    <?= session()->getFlashdata('pesan'); ?>
+                    <?= session()->getFlashdata('tambah'); ?>
+                </div>
+            <?php endif; ?>
+            <?php if (session()->getFlashdata('hapus')) : ?>
+                <div class="alert alert-danger">
+                    <?= session()->getFlashdata('hapus'); ?>
                 </div>
             <?php endif; ?>
             <table class="table table-striped">

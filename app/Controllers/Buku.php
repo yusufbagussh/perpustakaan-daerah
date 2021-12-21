@@ -47,9 +47,10 @@ class Buku extends BaseController
         // $buku = $this->bukuModel->getBuku($buku_slug);
         // $data['buku'] = $buku[0];
         // $data['judul'] = "Detail Buku";
+        // $buku = $this->bukuModel->getBukuDetail()
         $data = [
             'judul' => 'Detail Buku',
-            'buku' =>   $this->bukuModel->getBuku($buku_slug)
+            'buku'  =>  $this->bukuModel->getBukuDetail($buku_slug),
         ];
 
         //jika buku tidak ada
@@ -81,7 +82,7 @@ class Buku extends BaseController
                 'rules' => 'required|is_unique[buku.buku_judul]',
                 'errors' => [
                     'required' => '{field} buku harus diisi',
-                    'is_unique' => '{field} buku sudah terdaftar'
+                    // 'is_unique' => '{field} buku sudah terdaftar'
                 ]
             ],
             'buku_gambar' => [
@@ -108,8 +109,8 @@ class Buku extends BaseController
         } else {
             //generate nama sampul random
             $namaGambar = $fileGambar->getRandomName();
-            //pindahkan buku_gambar ke folder img
-            $fileGambar->move('img', $namaGambar);
+            //pindahkan buku_gambar ke folder img/buku
+            $fileGambar->move('img/buku', $namaGambar);
         }
 
         $this->bukuModel->save(
@@ -127,7 +128,7 @@ class Buku extends BaseController
             ]
         );
 
-        session()->setFlashdata('pesan', 'Data berhasil dimasukkan.');
+        session()->setFlashdata('tambah', 'Data berhasil dimasukkan.');
 
         return redirect()->to('/buku');
     }
@@ -142,11 +143,11 @@ class Buku extends BaseController
         //cek jika gambarnya default
         if ($buku['buku_gambar'] != 'default.png') {
             //hapus buku_gambar
-            unlink('img/' . $buku['buku_gambar']);
+            unlink('img/buku/' . $buku['buku_gambar']);
         }
 
         $this->bukuModel->delete($buku_id);
-        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        session()->setFlashdata('hapus', 'Data berhasil dihapus.');
         return redirect()->to('/buku');
     }
 
@@ -215,9 +216,9 @@ class Buku extends BaseController
             //generate nama sampul random
             $namaGambar = $fileGambar->getRandomName();
             //pindahkan buku_gambar ke folder img
-            $fileGambar->move('img', $namaGambar);
+            $fileGambar->move('img/buku', $namaGambar);
             //hapus file yg lama
-            unlink('img/' . $this->request->getVar('gambarLama'));
+            unlink('img/buku/' . $this->request->getVar('gambarLama'));
         }
 
         $buku_slug = url_title($this->request->getVar('buku_judul'), '-', true);
@@ -237,7 +238,7 @@ class Buku extends BaseController
             ]
         );
 
-        session()->setFlashdata('pesan', 'Data berhasil diubah.');
+        session()->setFlashdata('tambah', 'Data berhasil diubah.');
 
         return redirect()->to('/buku');
     }
