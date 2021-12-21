@@ -112,6 +112,7 @@ class Admin extends BaseController
         session();
         $admin = $this->adminModel->getAdmin($admin_id);
 
+
         $data = [
             'admin' => $admin,
             'validation' => \Config\Services::validation(),

@@ -17,12 +17,6 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="anggota_username" class="col-sm-2 col-form-label">Username</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="anggota_username" name="anggota_username" value="<?= old('anggota_username'); ?>">
-                    </div>
-                </div>
-                <div class="form-group row">
                     <label for="anggota_jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="anggota_jenis_kelamin" name="anggota_jenis_kelamin" value="<?= old('anggota_jenis_kelamin'); ?>">
@@ -71,7 +65,7 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('anggota_foto')) ? 'is-invalid' : ''; ?>" id="anggota_foto" name="anggota_foto" onchange="previewImg()">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('anggota_foto')) ? 'is-invalid' : ''; ?>" id="gambar" name="anggota_foto" onchange="previewImg()">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('anggota_foto'); ?>
                             </div>
@@ -91,7 +85,7 @@
 </div>
 <script>
     function previewImg() {
-        const anggota_foto = document.querySelector('#anggota_foto');
+        const anggota_foto = document.querySelector('#gambar');
         const gambarLabel = document.querySelector('.custom-file-label')
         const imgPreview = document.querySelector('.img-preview');
 
