@@ -19,8 +19,9 @@
                 </div>
                 <div class="form-group row">
                     <label for="anggota_jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="anggota_jenis_kelamin" name="anggota_jenis_kelamin" value="<?= (old('anggota_jenis_kelamin')) ? old('anggota_jenis_kelamin') : $anggota['anggota_jenis_kelamin']; ?>">
+                    <div class="col-sm-10 mt-2">
+                        <input type="radio" name="anggota_jenis_kelamin" value="Laki - Laki" <?php if ($anggota['anggota_jenis_kelamin'] == 'Laki - Laki') echo 'checked' ?>> Laki - Laki
+                        <input type="radio" name="anggota_jenis_kelamin" value="Perempuan" <?php if ($anggota['anggota_jenis_kelamin'] == 'Perempuan') echo 'checked' ?>> Perempuan
                     </div>
                 </div>
                 <div class="form-group row">
@@ -62,7 +63,7 @@
                 <div class="form-group row">
                     <label for="anggota_foto" class="col-sm-2 col-form-label">Foto Anggota</label>
                     <div class="col-sm-2">
-                        <img src="/img/<?= $anggota['anggota_foto']; ?>" class="img-tumbnail img-preview" width="100">
+                        <img src="/img/profile/<?= $anggota['anggota_foto']; ?>" class="img-tumbnail img-preview" width="100">
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
