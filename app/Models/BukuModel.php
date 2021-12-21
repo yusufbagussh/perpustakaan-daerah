@@ -44,7 +44,7 @@ class BukuModel extends Model
     {
         return
             $this->db->table('buku')
-            ->join('kategori', 'buku.buku_kategori=kategori.kategori_id')
+            ->join('kategori', 'buku.buku_kategori_id=kategori.kategori_id')
             ->where("buku.buku_id='" . $buku_id . "'")
             ->get()->getResultArray();
     }
@@ -53,7 +53,7 @@ class BukuModel extends Model
     {
         return
             $this->db->table('buku')
-            ->join('kategori', 'buku.buku_kategori=kategori.kategori_id')
+            ->join('kategori', 'buku.buku_kategori_id=kategori.kategori_id')
             ->get()->getResultArray();
     }
 

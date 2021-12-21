@@ -7,7 +7,7 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'judul' => 'E-Library'
+            'judul' => 'E-Perpustakaan'
         ];
         return view('pages/home', $data);
 

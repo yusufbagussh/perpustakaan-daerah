@@ -15,55 +15,52 @@
     <div class="sidebar-heading">
         User Profile
     </div>
+    <!-- Nav Item - Charts -->
+    <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+            <i class="fas fa-fw fa-user"></i>
+            <span>User</span></a>
+    </li>
 
-    <<<<<<< HEAD=======>>>>>>> 7ddab25fd018e7483089b5ee969d55d6cfd8d88a
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="charts.html">
-                <i class="fas fa-fw fa-user"></i>
-                <span>User</span></a>
-        </li>
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+            <i class="fas fa-fw fa-user-edit"></i>
+            <span>Edit Profile</span></a>
+    </li>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-user-edit"></i>
-                <span>Edit Profile</span></a>
-        </li>
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Fitur
+    </div>
 
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Fitur
-        </div>
+    <!-- Nav Item - Charts -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/kategori/index') ?>">
+            <i class="fas fa-fw fa-list"></i>
+            <span>Kategori</span></a>
+    </li>
 
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/buku/index') ?>">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Book</span></a>
+    </li>
 
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/kategori/index') ?>">
-                <i class="fas fa-fw fa-list"></i>
-                <span>Kategori</span></a>
-        </li>
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/admin/index') ?>">
+            <i class="fas fa-fw fa-user-cog"></i>
+            <span>Admin</span></a>
+    </li>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/buku/index') ?>">
-                <i class="fas fa-fw fa-book"></i>
-                <span>Book</span></a>
-        </li>
-
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/admin/index') ?>">
-                <i class="fas fa-fw fa-user-cog"></i>
-                <span>Admin</span></a>
-        </li>
-
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/anggota/index') ?>">
-                <i class="fas fa-fw fa-users"></i>
-                <span>Anggota</span></a>
-        </li>
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/anggota/index') ?>">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Anggota</span></a>
+    </li>
 
 
 
@@ -71,22 +68,22 @@
 
 
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-sign-out-alt"></i>
-                <span>Logout</span></a>
-        </li>
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+            <i class="fas fa-fw fa-sign-out-alt"></i>
+            <span>Logout</span></a>
+    </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
 
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
 
 </ul>

@@ -17,7 +17,7 @@
                             <h5 class="card-title"><?= $buku['buku_judul']; ?></h5>
                             <p class="card-text"> <b>Penulis</b> : <?= $buku['buku_penulis']; ?></p>
                             <p class="card-text"><small class="text-muted"><b>Perbit</b>: <?= $buku['buku_penerbit']; ?></small></p>
-                            <p class="card-text"><small class="text-muted"><b>Kategori</b>: <?= $buku['buku_kategori']; ?></small></p>
+                            <p class="card-text"><small class="text-muted"><b>Kategori</b>: <?= $buku['buku_kategori_id']; ?></small></p>
                             <p class="card-text"><small class="text-muted"><b>ISBN</b>: <?= $buku['buku_isbn']; ?></small></p>
                             <p class="card-text"><small class="text-muted"><b>Stok</b>: <?= $buku['buku_stok']; ?></small></p>
                             <p class="card-text"><small class="text-muted"><b>Halaman</b>: <?= $buku['buku_halaman']; ?></small></p>
