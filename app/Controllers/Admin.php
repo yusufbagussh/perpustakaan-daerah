@@ -13,6 +13,7 @@ class Admin extends BaseController
 
     public function __construct()
     {
+        helper(['form', 'url', 'auth']);
         $this->bukuModel = new BukuModel();
         $this->kategoriModel = new KategoriModel();
         $this->adminModel = new AdminModel();
@@ -33,6 +34,7 @@ class Admin extends BaseController
     {
         $data = [
             'judul' => 'Daftar Admin Perpustakaan',
+            'admin' => $this->adminModel->getAdminById(user_id()),
         ];
 
         return view('admin/profil', $data);

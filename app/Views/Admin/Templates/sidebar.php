@@ -17,14 +17,14 @@
     </div>
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="/admin/profil">
             <i class="fas fa-fw fa-user"></i>
             <span>User</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-user-edit"></i>
             <span>Edit Profile</span></a>
     </li>

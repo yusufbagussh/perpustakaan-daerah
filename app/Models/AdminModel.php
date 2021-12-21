@@ -25,7 +25,8 @@ class AdminModel extends Model
         }
     }
 
-    public function getProfilAdmin()
+    public function getAdminById($users_id)
     {
+        return $this->db->table('admin')->where(['users_id' => $users_id])->get()->getResultArray();
     }
 }
