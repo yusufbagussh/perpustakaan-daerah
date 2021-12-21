@@ -21,8 +21,8 @@ class BukuModel extends Model
         'buku_halaman',
         'buku_gambar',
         'buku_sinopsis',
-        'buku_created_at',
-        'buku_updated_at'
+        'created_at',
+        'updated_at'
     ];
 
     public function getBuku($buku_slug = false)
@@ -30,22 +30,20 @@ class BukuModel extends Model
         if ($buku_slug == false) {
             return $this->findAll();
         }
-
         // return
         //     $this->db->table('buku')
         //     ->join('kategori', 'buku.kategori=kategori.id_kategori')
         //     ->where("buku.buku_slug='" . $buku_slug . "'")
         //     ->get()->getResultArray();
-
         return $this->where(['buku_slug' => $buku_slug])->first();
     }
 
-    public function getBukuDetail($buku_id)
+    public function getBukuDetail($buku_slug)
     {
         return
             $this->db->table('buku')
-            ->join('kategori', 'buku.buku_kategori=kategori.kategori_id')
-            ->where("buku.buku_id='" . $buku_id . "'")
+            ->join('kategori', 'buku.buku_kategori_id=kategori.kategori_id')
+            ->where(['buku_slug' => $buku_slug])
             ->get()->getResultArray();
     }
 
@@ -53,7 +51,7 @@ class BukuModel extends Model
     {
         return
             $this->db->table('buku')
-            ->join('kategori', 'buku.buku_kategori=kategori.kategori_id')
+            ->join('kategori', 'buku.buku_kategori_id=kategori.kategori_id')
             ->get()->getResultArray();
     }
 

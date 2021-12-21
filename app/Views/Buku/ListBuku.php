@@ -1,5 +1,5 @@
-<?= $this->extend('layout/template'); ?>
-<?= $this->section('content'); ?>
+<?= $this->extend('/admin/templates/index'); ?>
+<?= $this->section('page-content'); ?>
 
 <div class="container">
     <div class="row">
@@ -19,9 +19,14 @@
         <div class="col">
             <a href="/buku/tambah" class="btn btn-primary mb-3">Tambah Data Buku</a>
 
-            <?php if (session()->getFlashdata('pesan')) : ?>
+            <?php if (session()->getFlashdata('tambah')) : ?>
                 <div class="alert alert-success">
-                    <?= session()->getFlashdata('pesan'); ?>
+                    <?= session()->getFlashdata('tambah'); ?>
+                </div>
+            <?php endif; ?>
+            <?php if (session()->getFlashdata('hapus')) : ?>
+                <div class="alert alert-danger">
+                    <?= session()->getFlashdata('hapus'); ?>
                 </div>
             <?php endif; ?>
             <table class="table table-striped">
@@ -40,7 +45,7 @@
                     <?php foreach ($buku as $b) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $b['buku_gambar']; ?>" alt="" class="sampul"></td>
+                            <td><img src="/img/buku/<?= $b['buku_gambar']; ?>" alt="" class="sampul" style="width: 100px;"></td>
                             <td><?= $b['buku_judul']; ?></td>
                             <td><?= $b['buku_penulis']; ?></td>
                             <td><?= $b['kategori_nama']; ?></td>

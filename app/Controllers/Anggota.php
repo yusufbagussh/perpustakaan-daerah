@@ -86,14 +86,13 @@ class Anggota extends BaseController
         } else {
             //generate anggota_nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan anggota_foto ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan anggota_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
         }
 
         $this->anggotaModel->save(
             [
                 'anggota_nama' => $this->request->getVar('anggota_nama'),
-                'anggota_username' => $this->request->getVar('anggota_username'),
                 'anggota_jenis_kelamin' => $this->request->getVar('anggota_jenis_kelamin'),
                 'anggota_tempat_lahir' => $this->request->getVar('anggota_tempat_lahir'),
                 'anggota_tanggal_lahir' => $this->request->getVar('anggota_tanggal_lahir'),
@@ -120,7 +119,7 @@ class Anggota extends BaseController
         //cek jika gambarnya default
         if ($anggota['anggota_foto'] != 'default.png') {
             //hapus gambar
-            unlink('img/' . $anggota['anggota_foto']);
+            unlink('img/profile/' . $anggota['anggota_foto']);
         }
 
         $this->anggotaModel->delete($anggota_id);
@@ -131,15 +130,10 @@ class Anggota extends BaseController
     public function ubahAnggota($anggota_id)
     {
         session();
+        $anggota = $this->anggotaModel->getAnggota($anggota_id);
 
-        $anggota = $this->anggotaModel->find($anggota_id);
-        //$kategori = $this->kategoriModel->getKategori();
-        if (empty($anggota)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Anggota Tidak ditemukan !');
-        }
         $data = [
             'anggota' => $anggota,
-            //'kategori' => $kategori,
             'validation' => \Config\Services::validation(),
             'judul' => "Form Ubah Data Anggota"
         ];
@@ -150,42 +144,18 @@ class Anggota extends BaseController
 
     public function updateAnggota($anggota_id)
     {
-        if (!$this->validate([
-            'anggota_nama' => [
-                // 'rules' => $rule_judul,
-                'rules' => 'required|is_unique[anggota.anggota_nama]',
-                'errors' => [
-                    'required' => '{field} anggota harus diisi',
-                    'is_unique' => '{field} anggota sudah terdaftar'
-                ]
-            ],
-            'gambar' => [
-                'rules' => 'max_size[gambar, 1024]|is_image[gambar]|mime_in[gambar,image/jpg,image/png,image/jpeg]',
-                'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar',
-                    'is_image' => 'Yang anda pilih bukanlah gambar',
-                    'mime_in' => 'Format gambar tidak sesuai'
+        $fileFoto = $this->request->getFile('anggota_foto');
 
-                ]
-            ]
-        ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/anggota/ubah/' . $this->request->getVar('slug'))->withInput()->with('validation', $validation);
-            return redirect()->to('/anggota/ubahanggota/' . $this->request->getVar('anggota_id'))->withInput();
-        }
-
-        $fileFoto = $this->request->getFile('gambar');
-
-        //apabila tidak ada gambar yang diupload
+        //apabila tidak ada anggota_foto yang diupload
         if ($fileFoto->getError() == 4) {
-            $namaFoto = $this->request->getVar('gambarLama');
+            $namaFoto = $this->request->getVar('fotoLama');
         } else {
             //generate nama sampul random
             $namaFoto = $fileFoto->getRandomName();
-            //pindahkan gambar ke folder img
-            $fileFoto->move('img', $namaFoto);
+            //pindahkan anggota_foto ke folder img/profile
+            $fileFoto->move('img/profile', $namaFoto);
             //hapus file yg lama
-            unlink('img/' . $this->request->getVar('gambarLama'));
+            unlink('img/profile/' . $this->request->getVar('fotoLama'));
         }
 
         //$slug = url_title($this->request->getVar('anggota_nama'), '-', true);
@@ -193,8 +163,6 @@ class Anggota extends BaseController
             [
                 'anggota_id' => $anggota_id,
                 'anggota_nama' => $this->request->getVar('anggota_nama'),
-                // 'slug' => $slug,
-                'anggota_username' => $this->request->getVar('anggota_username'),
                 'anggota_jenis_kelamin' => $this->request->getVar('anggota_jenis_kelamin'),
                 'anggota_tempat_lahir' => $this->request->getVar('anggota_tempat_lahir'),
                 'anggota_tanggal_lahir' => $this->request->getVar('anggota_tanggal_lahir'),

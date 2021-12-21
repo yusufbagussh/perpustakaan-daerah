@@ -1,11 +1,11 @@
-<?= $this->extend('layout/template'); ?>
-<?= $this->section('content'); ?>
+<?= $this->extend('/admin/templates/index'); ?>
+<?= $this->section('page-content'); ?>
 
 <div class="container">
     <div class="row">
         <div class="col-8">
             <h1><?= $judul; ?></h1>
-            <form class="mt-3" method="POST" action="/kategori/tambahkategori" enctype="multipart/form-data">
+            <form class="mt-3" method="POST" action="/kategori/simpankategori" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="kategori_nama" class="col-sm-2 col-form-label">Nama Kategori</label>

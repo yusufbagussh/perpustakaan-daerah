@@ -1,5 +1,5 @@
-<?= $this->extend('layout/template'); ?>
-<?= $this->section('content'); ?>
+<?= $this->extend('/admin/templates/index'); ?>
+<?= $this->section('page-content'); ?>
 
 <div class="container">
     <div class="row">
@@ -30,7 +30,6 @@
                         <th scope="col">No</th>
                         <th scope="col">Foto</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">Username</th>
                         <th scope="col">Nomor Indentitas</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -40,9 +39,8 @@
                     <?php foreach ($anggota as $a) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><img src="/img/<?= $a['anggota_foto']; ?>" alt="" class="sampul"></td>
+                            <td><img src="/img/profile/<?= $a['anggota_foto']; ?>" alt="" class="sampul" width="100px"></td>
                             <td><?= $a['anggota_nama']; ?></td>
-                            <td><?= $a['anggota_username']; ?></td>
                             <td><?= $a['anggota_nomor_identitas']; ?></td>
                             <td><a href="/anggota/detailanggota/<?= $a['anggota_id']; ?>" class="btn btn-success">Detail</a></td>
                         </tr>
