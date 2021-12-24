@@ -7,7 +7,7 @@
     <header class="masthead">
         <div class="container">
             <div class="masthead-heading text-uppercase">Perpustakaan Daerah Kota Surakarta</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#services">LIHAT KOLEKSI</a>
+            <a class="btn btn-primary btn-xl text-uppercase" href="<?= base_url('buku/listbukuanggota'); ?>">LIHAT KOLEKSI</a>
         </div>
     </header>
     <!-- About-->
