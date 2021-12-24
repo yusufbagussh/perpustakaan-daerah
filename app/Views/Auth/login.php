@@ -26,7 +26,7 @@
 										</div>
 									<?php else : ?>
 										<div class="form-group">
-											<input type="email" name="login" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+											<input type="text" name="login" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="<?= lang('Auth.emailOrUsername') ?>">
 											<?= session('errors.login') ?>
 										</div>
 									<?php endif; ?>

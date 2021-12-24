@@ -21,13 +21,14 @@ class Pages extends BaseController
                 'judul' => 'E-Perpustakaan',
             ];
             return view('pages/home', $data);
-        } else if (in_groups('admin')) {
-            return redirect()->to('admin/');
-        } else {
-            $data = [
-                'judul' => 'E-Perpustakaan',
-            ];
-            return view('pages/home', $data);
+        } else if (in_groups('admin')) { {
+                $data = [
+                    'judul' => 'E-Perpustakaan',
+                ];
+                return view('pages/home', $data);
+            }
+        } else if (in_groups('superadmin')) {
+            return redirect()->to('/admin');
         }
     }
 

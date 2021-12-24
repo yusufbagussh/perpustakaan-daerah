@@ -41,7 +41,7 @@ class AnggotaModel extends Model
         $data = [
             'anggota_id' => '',
             'anggota_nama' => 'Null',
-            'anggota_foto' => 'Null',
+            'anggota_foto' => '',
             'users_id' => $user_id
         ];
         return $this->db->table('anggota')->insert($data);
