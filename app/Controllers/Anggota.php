@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\AnggotaModel;
 use \Myth\Auth\Models\UserModel;
+use App\Models\BukuModel;
 
 class Anggota extends BaseController
 {
@@ -12,6 +13,7 @@ class Anggota extends BaseController
     {
         $this->anggotaModel = new AnggotaModel();
         $this->userModel = new UserModel();
+        $this->bukuModel = new BukuModel();
     }
 
     public function index()

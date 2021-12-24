@@ -242,4 +242,29 @@ class Buku extends BaseController
 
         return redirect()->to('/buku');
     }
+
+    public function listbukuanggota()
+    {
+        $data = [
+            'judul' => 'Daftar Buku Perpustakaan',
+            'buku' =>   $this->bukuModel->getBukuKategori(),
+        ];
+
+        return view('buku/listbukuanggota', $data);
+    }
+
+    public function detailbukuanggota($buku_slug)
+    {
+        $data = [
+            'judul' => 'Detail Buku',
+            'buku'  =>  $this->bukuModel->getBukuDetail($buku_slug),
+        ];
+
+        //jika buku tidak ada
+        if (empty($data['buku'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Judul buku ' . $buku_slug . ' tidak ditemukan');
+        };
+
+        return view('buku/detailbukuanggota', $data);
+    }
 }
