@@ -26,7 +26,7 @@ class Anggota extends BaseController
 
     public function detailAnggota($anggota_id)
     {
-        $anggota = $this->anggotaModel->getAnggota($anggota_id);
+        $anggota = $this->anggotaModel->getAnggotaById($anggota_id);
         $data = [
             'anggota' =>  $anggota,
             'judul' => 'Detail Anggota Perpustakaan'
@@ -130,7 +130,7 @@ class Anggota extends BaseController
     public function ubahAnggota($anggota_id)
     {
         session();
-        $anggota = $this->anggotaModel->getAnggota($anggota_id);
+        $anggota = $this->anggotaModel->getAnggotaById($anggota_id);
 
         $data = [
             'anggota' => $anggota,

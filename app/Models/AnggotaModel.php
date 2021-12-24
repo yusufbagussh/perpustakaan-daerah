@@ -22,11 +22,6 @@ class AnggotaModel extends Model
         'users_id'
     ];
 
-    // public function saveAnggota($data)
-    // {
-    //     return $this->db->table($this->table)->insert($data); //->query builder
-    // }
-
     public function getAnggota($anggota_id = "")
     {
         if ($anggota_id == "") {
@@ -34,5 +29,26 @@ class AnggotaModel extends Model
         } else {
             return $this->where(['anggota_id' => $anggota_id])->first();
         }
+    }
+
+    public function getAnggotaById($anggota_id)
+    {
+        return $this->db->table('anggota')->where(['anggota_id' => $anggota_id])->get()->getResultArray()[0];
+    }
+
+    public function createAnggotaProfil($user_id)
+    {
+        $data = [
+            'anggota_id' => '',
+            'anggota_nama' => 'Null',
+            'anggota_foto' => 'Null',
+            'users_id' => $user_id
+        ];
+        return $this->db->table('anggota')->insert($data);
+    }
+
+    public function updateAnggotaProfil($anggota_id, $data)
+    {
+        return $this->db->table('anggota')->where(['anggota_id' => $anggota_id])->update($data);
     }
 }

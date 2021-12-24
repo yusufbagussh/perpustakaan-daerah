@@ -2,16 +2,33 @@
 
 namespace App\Controllers;
 
+use App\Models\AnggotaModel;
+
 class Pages extends BaseController
 {
+    public function __construct()
+    {
+        helper(['form', 'url', 'auth']);
+        $this->anggotaModel = new AnggotaModel();
+    }
     public function index()
     {
-        $data = [
-            'judul' => 'E-Perpustakaan'
-        ];
-        return view('pages/home', $data);
-
-        //return view('home');
+        if (in_groups('member')) {
+            if (empty($this->anggotaModel->getAnggotaById(user_id()))) {
+                $this->anggotaModel->createAnggotaProfil(user_id());
+            }
+            $data = [
+                'judul' => 'E-Perpustakaan',
+            ];
+            return view('pages/home', $data);
+        } else if (in_groups('admin')) {
+            return redirect()->to('admin/');
+        } else {
+            $data = [
+                'judul' => 'E-Perpustakaan',
+            ];
+            return view('pages/home', $data);
+        }
     }
 
     public function about()
