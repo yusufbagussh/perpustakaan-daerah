@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\BukuModel;
 use App\Models\KategoriModel;
 use App\Models\AdminModel;
-use \Myth\Auth\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -21,7 +20,6 @@ class Admin extends BaseController
 
     public function index()
     {
-
         $data = [
             'judul' => 'Daftar Admin Perpustakaan',
             'admin' => $this->adminModel->findAll()

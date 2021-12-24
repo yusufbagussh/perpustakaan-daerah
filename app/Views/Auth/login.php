@@ -1,65 +1,67 @@
 <?= $this->extend('Auth/Templates/index'); ?>
 
 <?= $this->section('content'); ?>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="card o-hidden border-0 shadow-lg my-5 mx-0">
+				<div class="card-body p-0">
+					<div class="row">
+						<div class="col-md-7">
+							<img src="img/bg-book.jpg" style="height: 100%; width: 100%; object-fit: fill" alt="">
+						</div>
+						<div class="col-md-5">
+							<div class="p-5">
+								<div class="text-center">
+									<h1 class="h4 text-gray-900 mb-4"><?= lang('Auth.loginTitle') ?></h1>
+								</div>
+								<?= view('Myth\Auth\Views\_message_block') ?>
+								<form class="user" action="<?= route_to('login') ?>" method="post">
+									<?= csrf_field() ?>
 
-<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form action="<?= route_to('login') ?>" method="post" class="login100-form validate-form"><?= csrf_field() ?>
-					<span class="login100-form-title p-b-34">
-						<?= lang('Auth.loginTitle') ?>
-					</span>
-					<?= view('Myth\Auth\Views\_message_block') ?>
+									<?php if ($config->validFields === ['email']) : ?>
+										<div class="form-group">
+											<input type="email" name="login" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>">
+											<?= session('errors.login') ?>
+										</div>
+									<?php else : ?>
+										<div class="form-group">
+											<input type="text" name="login" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+											<?= session('errors.login') ?>
+										</div>
+									<?php endif; ?>
 
-						<?php if ($config->validFields === ['email']) : ?>
-							<div class="wrap-input100 rs-wrap-input100 validate-input m-b-20">
-								<input type="email" class="input100 <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
-								<span class="focus-input100"></span>
-								<div class="invalid-feedback">
-									<?= session('errors.login') ?>
+									<div class="form-group">
+										<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+										<?= session('errors.password') ?>
+									</div>
+									<div class="form-group">
+										<div class="custom-control custom-checkbox small">
+											<label class="custom-control-label" for="customCheck">
+												<input type="checkbox" name="remember" class="custom-control-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+												<?= lang('Auth.rememberMe') ?>
+											</label>
+										</div>
+									</div>
+									<button class="btn btn-primary btn-user btn-block" type="submit">
+										<?= lang('Auth.loginAction') ?>
+									</button>
+								</form>
+								<hr>
+								<!-- <div class="text-center">
+									<a class="small" href="forgot-password.html">Forgot Password?</a>
+								</div> -->
+								<div class="text-center">
+									<?php if ($config->allowRegistration) : ?>
+										<p><a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
+									<?php endif; ?>
 								</div>
 							</div>
-						<?php else : ?>
-							<div class="wrap-input100 rs-wrap-input100 validate-input m-b-20">
-								<input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
-								<span class="focus-input100"></span>
-								<div class="invalid-feedback">
-									<?= session('errors.login') ?>
-								</div>
-							</div>
-						<?php endif; ?>
-							<div class="wrap-input100 rs-wrap-input100 validate-input m-b-20">
-								<input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
-								<span class="focus-input100"></span>
-								<div class="invalid-feedback">
-									<?= session('errors.login') ?>
-								</div>
-							</div>
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit">
-							<?= lang('Auth.loginAction') ?>
-						</button>
+						</div>
 					</div>
-					<div class="w-full text-center p-t-27 p-b-239">
-						<?php if ($config->allowRemembering) : ?>
-							<div class="form-check txt1">
-								<label class="form-check-label">
-									<input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
-									<?= lang('Auth.rememberMe') ?>
-								</label>
-							</div>
-						<?php endif; ?>
-					</div>
-					<div class="w-full text-center">
-						<?php if ($config->allowRegistration) : ?>
-							<p><a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
-						<?php endif; ?>
-					</div>
-				</form>
-				<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+				</div>
 			</div>
 		</div>
+	</div>
 </div>
-<div id="dropDownSelect1"></div>
-
-<?= $this->endSection(''); ?>
+<?= $this->endSection(); ?>

@@ -10,7 +10,7 @@
                 <div class="form-group row">
                     <label for="anggota_nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('anggota_nama')) ? 'is-invalid' : ''; ?>" id="anggota_nama" name="anggota_nama" autofocus value="<?= old('anggota_nama'); ?>">
+                        <input type="text" class="form-control" id="anggota_nama" name="anggota_nama" autofocus value="<?= old('anggota_nama'); ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('anggota_nama'); ?>
                         </div>

@@ -15,7 +15,6 @@ class AdminModel extends Model
         'users_id'
     ];
 
-
     public function getAdmin($admin_id = "")
     {
         if ($admin_id == "") {
