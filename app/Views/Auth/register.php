@@ -1,54 +1,57 @@
 <?= $this->extend('Auth/Templates/index'); ?>
 
 <?= $this->section('content'); ?>
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-                <form action="<?= route_to('register') ?>" class="login100-form validate-form" method="post">
-                        <?= csrf_field() ?>
-                    <span class="login100-form-title p-b-34">
-                        <?=lang('Auth.register')?>
-			        </span>
-					<?= view('Myth\Auth\_message_block') ?>
-					<div class="wrap-input100 rs-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100 <?php if(session('errors.email')) : ?>is-invalid<?php endif ?>" type="email" name="email" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
-						<span class="focus-input100"></span>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="card o-hidden border-0 shadow-lg my-5 mx-0">
+				<div class="card-body p-0">
+					<div class="row">
+						<div class="col-md-7">
+							<img src="img/bg-book.jpg" style="height: 100%; width: 100%; object-fit: fill" alt="">
+						</div>
+						<div class="col-md-5">
+							<div class="p-5">
+								<div class="text-center">
+									<h1 class="h4 text-gray-900 mb-4"><?= lang('Auth.register') ?></h1>
+								</div>
+								<?= view('Myth\Auth\Views\_message_block') ?>
+								<form action="<?= route_to('register') ?>" method="post" class="user">
+									<?= csrf_field() ?>
+									<div class="form-group">
+										<input type="text" class="form-control form-control-user <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-control form-control-user <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>" aria-describedby="emailHelp">
+										<small id="emailHelp" class="form-text text-muted"><?= lang('Auth.weNeverShare') ?></small>
+									</div>
+									<div class="form-group row">
+										<div class="col-sm-6 mb-3 mb-sm-0">
+											<input type="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
+										</div>
+										<div class="col-sm-6">
+											<input type="pass_confirm" class="form-control form-control-user <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
+										</div>
+									</div>
+									<button class="btn btn-primary btn-user btn-block" type="submit">
+										<?= lang('Auth.register') ?>
+									</button>
+								</form>
+								<hr>
+								<!-- <div class="text-center">
+									<a class="medium" href="#">Forgot Password?</a>
+								</div> -->
+								<div class="text-center">
+									<a href="<?= route_to('login') ?>">
+										Already have an account? <?= lang('Auth.signIn') ?>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="wrap-input100 rs-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100 <?php if(session('errors.username')) : ?>is-invalid<?php endif ?>" type="text" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
-						<span class="focus-input100"></span>
-					</div>
-                    <div class="wrap-input100 rs-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100 <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" type="password" name="password" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
-						<span class="focus-input100"></span>
-					</div>
-                    <div class="wrap-input100 rs-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100 <?php if(session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" type="password" name="pass_confirm" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
-						<span class="focus-input100"></span>
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit">
-							<?=lang('Auth.register')?>
-						</button>
-					</div>
-
-					<div class="w-full text-center p-t-27 p-b-239">
-						<span class="txt1">
-							Already registered?
-						</span>
-						<a href="<?= route_to('login') ?>" class="txt3">
-							<?=lang('Auth.signIn')?>
-						</a>
-					</div>
-				</form>
-
-				<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	
-
-	<div id="dropDownSelect1"></div>
+</div>
 <?= $this->endSection(''); ?>
