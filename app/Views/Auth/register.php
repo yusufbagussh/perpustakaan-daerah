@@ -30,7 +30,7 @@
 											<input type="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
 										</div>
 										<div class="col-sm-6">
-											<input type="pass_confirm" class="form-control form-control-user <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" name="password_confirm" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
+											<input type="pass_confirm" class="form-control form-control-user <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" name="pass_confirm" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
 										</div>
 									</div>
 									<button class="btn btn-primary btn-user btn-block" type="submit">
