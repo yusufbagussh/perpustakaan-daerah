@@ -22,5 +22,6 @@ return array(
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Config\\' => array($baseDir . '/app/Config'),
     'CodeIgniter\\' => array($vendorDir . '/codeigniter4/framework/system'),
+    'CodeIgniterCart\\' => array($vendorDir . '/jason-napolitano/codeigniter4-cart-module/src'),
     'App\\' => array($baseDir . '/app'),
 );
