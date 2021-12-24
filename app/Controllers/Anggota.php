@@ -26,7 +26,7 @@ class Anggota extends BaseController
 
     public function detailAnggota($anggota_id)
     {
-        $anggota = $this->anggotaModel->getAnggotaById($anggota_id);
+        $anggota = $this->anggotaModel->getAnggotaByIdAnggota($anggota_id);
         $data = [
             'anggota' =>  $anggota,
             'judul' => 'Detail Anggota Perpustakaan'

@@ -36,6 +36,11 @@ class AnggotaModel extends Model
         return $this->db->table('anggota')->where(['users_id' => $users_id])->get()->getResultArray();
     }
 
+    public function getAnggotaByIdAnggota($anggota_id)
+    {
+        return $this->db->table('anggota')->where(['anggota_id' => $anggota_id])->get()->getResultArray()[0];
+    }
+
     public function createAnggotaProfil($user_id)
     {
         $data = [

@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\BukuModel;
 use App\Models\KategoriModel;
 use App\Models\AdminModel;
-use \Myth\Auth\Models\UserModel;
 
 class Admin extends BaseController
 {

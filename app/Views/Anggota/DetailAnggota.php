@@ -6,7 +6,6 @@
         <div class="col">
 
             <h2 class="mt-2">Detail Anggota Perpustakaan</h2>
-
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4 p-2">

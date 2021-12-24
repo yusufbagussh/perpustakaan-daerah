@@ -15,17 +15,19 @@ class Pages extends BaseController
     {
         if (in_groups('member')) {
             if (empty($this->anggotaModel->getAnggotaById(user_id()))) {
-                $this->anggotaModel->createAnggotaProfil(user_id());
+                session();
+                $data = [
+                    'judul' => 'E-Perpustakaan',
+                    'validation' => \Config\Services::validation()
+                ];
+                return view('anggota/Registrasi', $data);
             }
             $data = [
                 'judul' => 'E-Perpustakaan',
             ];
             return view('pages/home', $data);
         } else if (in_groups('admin')) { {
-                $data = [
-                    'judul' => 'E-Perpustakaan',
-                ];
-                return view('pages/home', $data);
+                return redirect()->to('/admin');
             }
         } else if (in_groups('superadmin')) {
             return redirect()->to('/admin');
