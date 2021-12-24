@@ -31,9 +31,9 @@ class AnggotaModel extends Model
         }
     }
 
-    public function getAnggotaById($anggota_id)
+    public function getAnggotaById($users_id)
     {
-        return $this->db->table('anggota')->where(['anggota_id' => $anggota_id])->get()->getResultArray()[0];
+        return $this->db->table('anggota')->where(['users_id' => $users_id])->get()->getResultArray();
     }
 
     public function createAnggotaProfil($user_id)
@@ -41,7 +41,6 @@ class AnggotaModel extends Model
         $data = [
             'anggota_id' => '',
             'anggota_nama' => 'Null',
-            'anggota_foto' => '',
             'users_id' => $user_id
         ];
         return $this->db->table('anggota')->insert($data);

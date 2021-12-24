@@ -21,7 +21,6 @@ class Admin extends BaseController
 
     public function index()
     {
-
         $data = [
             'judul' => 'Daftar Admin Perpustakaan',
             'admin' => $this->adminModel->findAll()
