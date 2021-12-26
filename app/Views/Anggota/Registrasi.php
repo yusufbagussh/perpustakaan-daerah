@@ -64,7 +64,7 @@
                     <div class="form-group row">
                         <label for="anggota_nomor_identitas" class="col-sm-2 col-form-label">Nomor Indentitas</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="anggota_nomor_identitas" name="anggota_nomor_identitas" value="<?= old('anggota_nomor_identitas'); ?>">
+                            <input type="text" class="form-control" id="anggota_nomor_identitas" name="anggota_nomor_identitas" value="<?= old('anggota_nomor_identitas'); ?>">
                         </div>
                     </div>
                     <div class="form-group row">
