@@ -44,9 +44,9 @@ $routes->get('/buku/delete/(:num)', 'Buku::delete/$1');
 
 $routes->delete('/buku/(:num)', 'Buku::delete/$1');
 
-//$routes->get('/buku/(:any)', 'Buku::detail/$1');
+// $routes->get('/buku/(:any)', 'Buku::detail/$1');
 
-$routes->get('/buku/listbukuanggota', 'Buku::listbukuanggota');
+// $routes->get('/buku/listbukuanggota', 'Buku::listbukuanggota');
 
 //$routes->get('/buku/(:num)', 'Buku::detail/$1');
 

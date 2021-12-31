@@ -8,6 +8,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
 
+                <li class="nav-item"><a class="nav-link" href="#page-top">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('/') ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('/buku/listbukuanggota') ?>">Buku</a></li>
 
