@@ -7,12 +7,27 @@
             <h1>Daftar Admin Perpustakaan</h1>
             <form action="" method="POST">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Masukkan Keyword" name="keyword">
+                    <input type="text" class="form-control" id="myInput" placeholder="Masukkan Keyword" name="keyword">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
                     </div>
                 </div>
             </form>
+            <!-- <div class="card-header border-0">
+                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                    <div class="form-group mb-0">
+                        <div class="input-group input-group-alternative input-group-merge">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </form>
+            </div> -->
         </div>
     </div>
     <div class="row">
@@ -34,7 +49,7 @@
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                     <?php $i = 1; ?>
                     <?php foreach ($admin as $a) : ?>
                         <tr>

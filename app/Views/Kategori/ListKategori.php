@@ -7,7 +7,7 @@
             <h1><?= $judul; ?></h1>
             <form action="" method="POST">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Masukkan Keyword" name="keyword">
+                    <input type="text" class="form-control" id="myInput" placeholder="Masukkan Keyword" name="keyword">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
                     </div>
@@ -33,7 +33,7 @@
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                     <?php $i = 1; ?>
                     <?php foreach ($kategori as $k) : ?>
                         <tr>

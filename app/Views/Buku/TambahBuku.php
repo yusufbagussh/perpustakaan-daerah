@@ -65,7 +65,7 @@
                 <div class="form-group row">
                     <label for="buku_gambar" class="col-sm-2 col-form-label">Gambar</label>
                     <div class="col-sm-2">
-                        <img src="/img/default.png" class="img-tumbnail img-preview" width="100">
+                        <img src="/img/buku/default.png" class="img-tumbnail img-preview" width="100">
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">

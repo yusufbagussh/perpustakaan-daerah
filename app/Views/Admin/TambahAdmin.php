@@ -25,7 +25,7 @@
                 <div class="form-group row">
                     <label for="admin_foto" class="col-sm-2 col-form-label">Foto</label>
                     <div class="col-sm-2">
-                        <img src="/img/default.png" class="img-tumbnail img-preview" width="100">
+                        <img src="/img/profile/default.png" class="img-tumbnail img-preview" width="100">
                     </div>
                     <div class="col-sm-8">
                         <div class="custom-file">
