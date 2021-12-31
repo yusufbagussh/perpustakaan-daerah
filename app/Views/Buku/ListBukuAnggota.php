@@ -1,13 +1,11 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
 <!-- ------------------------------------------------------------ -->
-<div class=" container">
+<div class=" container mt-5">
     <center>
-        <h2>Daftar Buku</h2>
-
         <div class="album p-3 bg-light rounded px-10">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2">
+        <h2>Daftar Buku</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 mt-3">
                 <?php foreach ($buku as $b) : ?>
                     <div class="col">
                         <div class="card shadow-sm h-100">
@@ -20,17 +18,16 @@
                                 </text>
                                 <span class="badge bg-light text-dark"><?php echo $b['buku_penulis'] ?></span>
                                 <br>
-                                <span class="badge bg-warning text-dark"><?php echo $b['kategori_nama'] ?></span>
+                                <span class="badge bg-info text-dark"><?php echo $b['kategori_nama'] ?></span>
                             </div>
                             <div class="card-footer">
-                                <a href="/buku/detailbukuanggota/<?= $b['buku_slug']; ?>" class="btn btn-success">Detail</a>
+                                <a href="/buku/detailbukuanggota/<?= $b['buku_slug']; ?>" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
             <br>
-            <a href="/" class="btn btn-primary">Home</a>
         </div>
 </div>
 

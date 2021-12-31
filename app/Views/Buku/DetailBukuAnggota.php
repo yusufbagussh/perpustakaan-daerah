@@ -2,13 +2,13 @@
 <?= $this->section('content'); ?>
 <?php //dd($buku) 
 ?>
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col">
 
-            <h2 class="mt-2">Detail Buku</h2>
+            <h2 class="mt-4">Detail Buku</h2>
 
-            <div class="card mb-3" style="max-width: 750px;">
+            <div class="card mb-3 mt-3" style="max-width: 750px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <img src="/img/buku/<?= $buku[0]['buku_gambar']; ?>" class="card-img">
