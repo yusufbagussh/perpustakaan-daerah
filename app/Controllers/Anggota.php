@@ -178,6 +178,6 @@ class Anggota extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil diubah.');
 
-        return redirect()->to('/anggota');
+        return redirect()->to('pages/home');
     }
 }

@@ -7,14 +7,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#page-top">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= base_url('/') ?>">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= base_url('/buku/index') ?>">Buku</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= base_url('/kategori/index') ?>">Kategori</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= base_url('/anggota/index') ?>">Anggota</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?= base_url('/admin/index') ?>">Admin</a></li>
+                <?php
+                if (in_groups('admin') && ('superadmin')) {
+                ?>
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/') ?>">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/buku/index') ?>">Buku</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/kategori/index') ?>">Kategori</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/anggota/index') ?>">Anggota</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/admin/index') ?>">Admin</a></li>
+                <?php
+                } else {
+                ?>
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/') ?>">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('/buku/listbukuanggota') ?>">Buku</a></li>
+                <?php } ?>
                 <?php if (logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
                     <!-- <span class="navbar-text" style="text-align: right;">

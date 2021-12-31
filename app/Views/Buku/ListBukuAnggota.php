@@ -1,7 +1,7 @@
-<?= $this->extend('/layout/template'); ?>
+<?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-
-<div class="container">
+<!-- ------------------------------------------------------------ -->
+<div class=" container">
     <center>
         <h2>Daftar Buku</h2>
 
@@ -23,19 +23,14 @@
                                 <span class="badge bg-warning text-dark"><?php echo $b['kategori_nama'] ?></span>
                             </div>
                             <div class="card-footer">
-                                <!-- Modal Button -->
-                                <button href="#" data-toggle="modal" data-target="#myModal<?php echo $b['buku_id']; ?>" class="btn btn-primary rounded-pill">Detail</button>
-                                <!-- <a href="./detailBuku.php?buku_id=<?php echo $b['buku_id'] ?>" class="btn btn-primary rounded-pill px-3">Detail</a> -->
-                                <?php if ($b['buku_stok'] < 1) { ?>
-                                    <a type="button" class="btn btn-danger rounded-pill">Buku Habis</a>
-                                <?php } else { ?>
-                                    <a class="btn btn-success rounded-pill" href="pinjamBuku.php?buku_id=<?php echo $b["buku_id"] . "&buku_stok=" . $b['buku_stok'] ?>">Pinjam</a>
-                                <?php } ?>
+                                <a href="/buku/detailbukuanggota/<?= $b['buku_slug']; ?>" class="btn btn-success">Detail</a>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
+            <br>
+            <a href="/" class="btn btn-primary">Home</a>
         </div>
 </div>
 
